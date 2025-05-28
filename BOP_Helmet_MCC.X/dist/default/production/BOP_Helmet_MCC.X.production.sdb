@@ -1,0 +1,921 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F25K42 ]
+[d frameptr 16353 ]
+"96 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr2.c
+[e E15229 . `uc
+TMR2_ROP_STARTS_TMRON 0
+TMR2_ROP_STARTS_TMRON_ERSHIGH 1
+TMR2_ROP_STARTS_TMRON_ERSLOW 2
+TMR2_ROP_RESETS_ERSBOTHEDGE 3
+TMR2_ROP_RESETS_ERSRISINGEDGE 4
+TMR2_ROP_RESETS_ERSFALLINGEDGE 5
+TMR2_ROP_RESETS_ERSLOW 6
+TMR2_ROP_RESETS_ERSHIGH 7
+TMR2_OS_STARTS_TMRON 8
+TMR2_OS_STARTS_ERSRISINGEDGE 9
+TMR2_OS_STARTS_ERSFALLINGEDGE 10
+TMR2_OS_STARTS_ERSBOTHEDGE 11
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR2_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR2_OS_STARTS_TMRON_ERSHIGH 22
+TMR2_OS_STARTS_TMRON_ERSLOW 23
+TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"102
+[e E15252 . `uc
+TMR2_T2INPPS 0
+TMR2_RESERVED 1
+TMR2_T4POSTSCALED 2
+TMR2_T6POSTSCALED 3
+TMR2_CCP1_OUT 4
+TMR2_CCP2_OUT 5
+TMR2_CCP3_OUT 6
+TMR2_CCP4_OUT 7
+TMR2_PWM5_OUT 8
+TMR2_PWM6_OUT 9
+TMR2_PWM7_OUT 10
+TMR2_PWM8_OUT 11
+TMR2_RESERVED_2 12
+TMR2_RESERVED_3 13
+TMR2_C1_OUT_SYNC 14
+TMR2_C2_OUT_SYNC 15
+TMR2_ZCD_OUTPUT 16
+TMR2_CLC1_OUT 17
+TMR2_CLC2_OUT 18
+TMR2_CLC3_OUT 19
+TMR2_CLC4_OUT 20
+TMR2_UART1_RX_EDGE 21
+TMR2_UART1_TX_EDGE 22
+TMR2_UART2_RX_EDGE 23
+TMR2_UART2_TX_EDGE 24
+]
+"96 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr4.c
+[e E15229 . `uc
+TMR4_ROP_STARTS_TMRON 0
+TMR4_ROP_STARTS_TMRON_ERSHIGH 1
+TMR4_ROP_STARTS_TMRON_ERSLOW 2
+TMR4_ROP_RESETS_ERSBOTHEDGE 3
+TMR4_ROP_RESETS_ERSRISINGEDGE 4
+TMR4_ROP_RESETS_ERSFALLINGEDGE 5
+TMR4_ROP_RESETS_ERSLOW 6
+TMR4_ROP_RESETS_ERSHIGH 7
+TMR4_OS_STARTS_TMRON 8
+TMR4_OS_STARTS_ERSRISINGEDGE 9
+TMR4_OS_STARTS_ERSFALLINGEDGE 10
+TMR4_OS_STARTS_ERSBOTHEDGE 11
+TMR4_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR4_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR4_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR4_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR4_OS_STARTS_TMRON_ERSHIGH 22
+TMR4_OS_STARTS_TMRON_ERSLOW 23
+TMR4_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR4_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR4_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"102
+[e E15252 . `uc
+TMR4_T4INPPS 0
+TMR4_T2POSTSCALED 1
+TMR4_RESERVED 2
+TMR4_T6POSTSCALED 3
+TMR4_CCP1_OUT 4
+TMR4_CCP2_OUT 5
+TMR4_CCP3_OUT 6
+TMR4_CCP4_OUT 7
+TMR4_PWM5_OUT 8
+TMR4_PWM6_OUT 9
+TMR4_PWM7_OUT 10
+TMR4_PWM8_OUT 11
+TMR4_RESERVED_2 12
+TMR4_RESERVED_3 13
+TMR4_C1_OUT_SYNC 14
+TMR4_C2_OUT_SYNC 15
+TMR4_ZCD_OUTPUT 16
+TMR4_CLC1_OUT 17
+TMR4_CLC2_OUT 18
+TMR4_CLC3_OUT 19
+TMR4_CLC4_OUT 20
+TMR4_UART1_RX_EDGE 21
+TMR4_UART1_TX_EDGE 22
+TMR4_UART2_RX_EDGE 23
+TMR4_UART2_TX_EDGE 24
+]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"48 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+[v _my_Int1_Isr my_Int1_Isr `(v  1 e 1 0 ]
+"68
+[v _my_antiflicker_isr my_antiflicker_isr `(v  1 e 1 0 ]
+"88
+[v _my_fading_isr my_fading_isr `(v  1 e 1 0 ]
+"114
+[v _my_pwm_isr my_pwm_isr `(v  1 e 1 0 ]
+"153
+[v _my_delay my_delay `(v  1 e 1 0 ]
+"170
+[v _main main `(v  1 e 1 0 ]
+"32 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/ext_int.c
+[v _INT1_ISR INT1_ISR `(v  1 e 1 0 ]
+"41
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+"50
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+"54
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"59
+[v _EXT_INT_Initialize EXT_INT_Initialize `(v  1 e 1 0 ]
+"52 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"74
+[v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
+"91
+[v _INTERRUPT_InterruptManagerLow INTERRUPT_InterruptManagerLow `IIL(v  1 e 1 0 ]
+"50 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"62
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"76
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"61 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"87
+[v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
+"93
+[v _TMR0_StopTimer TMR0_StopTimer `(v  1 e 1 0 ]
+"121
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"134
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"138
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"64 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"108
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"119
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+"130
+[v _TMR2_Counter8BitGet TMR2_Counter8BitGet `(uc  1 e 1 0 ]
+"144
+[v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
+"155
+[v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
+"165
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+"178
+[v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+"182
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"64 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr4.c
+[v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
+"108
+[v _TMR4_Start TMR4_Start `(v  1 e 1 0 ]
+"119
+[v _TMR4_Stop TMR4_Stop `(v  1 e 1 0 ]
+"130
+[v _TMR4_Counter8BitGet TMR4_Counter8BitGet `(uc  1 e 1 0 ]
+"144
+[v _TMR4_Counter8BitSet TMR4_Counter8BitSet `(v  1 e 1 0 ]
+"155
+[v _TMR4_Period8BitSet TMR4_Period8BitSet `(v  1 e 1 0 ]
+"165
+[v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
+"178
+[v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
+"182
+[v _TMR4_DefaultInterruptHandler TMR4_DefaultInterruptHandler `(v  1 e 1 0 ]
+[s S305 . 1 `uc 1 I2C1TXIP 1 0 :1:0 
+`uc 1 I2C1IP 1 0 :1:1 
+`uc 1 I2C1EIP 1 0 :1:2 
+`uc 1 U1RXIP 1 0 :1:3 
+`uc 1 U1TXIP 1 0 :1:4 
+`uc 1 U1EIP 1 0 :1:5 
+`uc 1 U1IP 1 0 :1:6 
+`uc 1 TMR0IP 1 0 :1:7 
+]
+"2969 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f25k42.h
+[u S314 . 1 `S305 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES314  1 e 1 @14723 ]
+[s S326 . 1 `uc 1 TMR1IP 1 0 :1:0 
+`uc 1 TMR1GIP 1 0 :1:1 
+`uc 1 TMR2IP 1 0 :1:2 
+`uc 1 CCP1IP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 NCO1IP 1 0 :1:5 
+`uc 1 CWG1IP 1 0 :1:6 
+`uc 1 CLC1IP 1 0 :1:7 
+]
+"3031
+[u S335 . 1 `S326 1 . 1 0 ]
+[v _IPR4bits IPR4bits `VES335  1 e 1 @14724 ]
+[s S267 . 1 `uc 1 INT1IP 1 0 :1:0 
+`uc 1 C2IP 1 0 :1:1 
+`uc 1 DMA2SCNTIP 1 0 :1:2 
+`uc 1 DMA2DCNTIP 1 0 :1:3 
+`uc 1 DMA2ORIP 1 0 :1:4 
+`uc 1 DMA2AIP 1 0 :1:5 
+`uc 1 I2C2RXIP 1 0 :1:6 
+`uc 1 I2C2TXIP 1 0 :1:7 
+]
+"3088
+[u S276 . 1 `S267 1 . 1 0 ]
+[v _IPR5bits IPR5bits `VES276  1 e 1 @14725 ]
+[s S288 . 1 `uc 1 TMR4IP 1 0 :1:0 
+`uc 1 CCP2IP 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 CWG2IP 1 0 :1:3 
+`uc 1 CLC2IP 1 0 :1:4 
+`uc 1 INT2IP 1 0 :1:5 
+]
+"3210
+[u S295 . 1 `S288 1 . 1 0 ]
+[v _IPR7bits IPR7bits `VES295  1 e 1 @14727 ]
+[s S125 . 1 `uc 1 I2C1TXIE 1 0 :1:0 
+`uc 1 I2C1IE 1 0 :1:1 
+`uc 1 I2C1EIE 1 0 :1:2 
+`uc 1 U1RXIE 1 0 :1:3 
+`uc 1 U1TXIE 1 0 :1:4 
+`uc 1 U1EIE 1 0 :1:5 
+`uc 1 U1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"3534
+[u S134 . 1 `S125 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES134  1 e 1 @14739 ]
+[s S456 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR1GIE 1 0 :1:1 
+`uc 1 TMR2IE 1 0 :1:2 
+`uc 1 CCP1IE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 NCO1IE 1 0 :1:5 
+`uc 1 CWG1IE 1 0 :1:6 
+`uc 1 CLC1IE 1 0 :1:7 
+]
+"3596
+[u S465 . 1 `S456 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES465  1 e 1 @14740 ]
+[s S347 . 1 `uc 1 INT1IE 1 0 :1:0 
+`uc 1 C2IE 1 0 :1:1 
+`uc 1 DMA2SCNTIE 1 0 :1:2 
+`uc 1 DMA2DCNTIE 1 0 :1:3 
+`uc 1 DMA2ORIE 1 0 :1:4 
+`uc 1 DMA2AIE 1 0 :1:5 
+`uc 1 I2C2RXIE 1 0 :1:6 
+`uc 1 I2C2TXIE 1 0 :1:7 
+]
+"3653
+[u S356 . 1 `S347 1 . 1 0 ]
+[v _PIE5bits PIE5bits `VES356  1 e 1 @14741 ]
+[s S393 . 1 `uc 1 TMR4IE 1 0 :1:0 
+`uc 1 CCP2IE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 CWG2IE 1 0 :1:3 
+`uc 1 CLC2IE 1 0 :1:4 
+`uc 1 INT2IE 1 0 :1:5 
+]
+"3775
+[u S400 . 1 `S393 1 . 1 0 ]
+[v _PIE7bits PIE7bits `VES400  1 e 1 @14743 ]
+[s S104 . 1 `uc 1 I2C1TXIF 1 0 :1:0 
+`uc 1 I2C1IF 1 0 :1:1 
+`uc 1 I2C1EIF 1 0 :1:2 
+`uc 1 U1RXIF 1 0 :1:3 
+`uc 1 U1TXIF 1 0 :1:4 
+`uc 1 U1EIF 1 0 :1:5 
+`uc 1 U1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"4099
+[u S113 . 1 `S104 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES113  1 e 1 @14755 ]
+[s S477 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR1GIF 1 0 :1:1 
+`uc 1 TMR2IF 1 0 :1:2 
+`uc 1 CCP1IF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 NCO1IF 1 0 :1:5 
+`uc 1 CWG1IF 1 0 :1:6 
+`uc 1 CLC1IF 1 0 :1:7 
+]
+"4161
+[u S486 . 1 `S477 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES486  1 e 1 @14756 ]
+[s S368 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 C2IF 1 0 :1:1 
+`uc 1 DMA2SCNTIF 1 0 :1:2 
+`uc 1 DMA2DCNTIF 1 0 :1:3 
+`uc 1 DMA2ORIF 1 0 :1:4 
+`uc 1 DMA2AIF 1 0 :1:5 
+`uc 1 I2C2RXIF 1 0 :1:6 
+`uc 1 I2C2TXIF 1 0 :1:7 
+]
+"4218
+[u S377 . 1 `S368 1 . 1 0 ]
+[v _PIR5bits PIR5bits `VES377  1 e 1 @14757 ]
+[s S410 . 1 `uc 1 TMR4IF 1 0 :1:0 
+`uc 1 CCP2IF 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 CWG2IF 1 0 :1:3 
+`uc 1 CLC2IF 1 0 :1:4 
+`uc 1 INT2IF 1 0 :1:5 
+]
+"4340
+[u S417 . 1 `S410 1 . 1 0 ]
+[v _PIR7bits PIR7bits `VES417  1 e 1 @14759 ]
+"4461
+[v _PMD0 PMD0 `VEuc  1 e 1 @14784 ]
+"4523
+[v _PMD1 PMD1 `VEuc  1 e 1 @14785 ]
+"4585
+[v _PMD2 PMD2 `VEuc  1 e 1 @14786 ]
+"4630
+[v _PMD3 PMD3 `VEuc  1 e 1 @14787 ]
+"4692
+[v _PMD4 PMD4 `VEuc  1 e 1 @14788 ]
+"4725
+[v _PMD5 PMD5 `VEuc  1 e 1 @14789 ]
+"4770
+[v _PMD6 PMD6 `VEuc  1 e 1 @14790 ]
+"4820
+[v _PMD7 PMD7 `VEuc  1 e 1 @14791 ]
+"4959
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @14809 ]
+"5099
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @14811 ]
+"5251
+[v _OSCEN OSCEN `VEuc  1 e 1 @14813 ]
+"5302
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @14814 ]
+"5406
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @14815 ]
+"7412
+[v _ANSELA ANSELA `VEuc  1 e 1 @14912 ]
+"7474
+[v _WPUA WPUA `VEuc  1 e 1 @14913 ]
+"7536
+[v _ODCONA ODCONA `VEuc  1 e 1 @14914 ]
+"7598
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @14915 ]
+"7660
+[v _INLVLA INLVLA `VEuc  1 e 1 @14916 ]
+"8032
+[v _ANSELB ANSELB `VEuc  1 e 1 @14928 ]
+"8094
+[v _WPUB WPUB `VEuc  1 e 1 @14929 ]
+"8156
+[v _ODCONB ODCONB `VEuc  1 e 1 @14930 ]
+"8218
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @14931 ]
+"8280
+[v _INLVLB INLVLB `VEuc  1 e 1 @14932 ]
+"8652
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @14938 ]
+"8760
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @14939 ]
+"8868
+[v _ANSELC ANSELC `VEuc  1 e 1 @14944 ]
+"8930
+[v _WPUC WPUC `VEuc  1 e 1 @14945 ]
+"8992
+[v _ODCONC ODCONC `VEuc  1 e 1 @14946 ]
+"9054
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @14947 ]
+"9116
+[v _INLVLC INLVLC `VEuc  1 e 1 @14948 ]
+"9488
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @14954 ]
+"9596
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @14955 ]
+"9704
+[v _WPUE WPUE `VEuc  1 e 1 @14977 ]
+"9725
+[v _INLVLE INLVLE `VEuc  1 e 1 @14980 ]
+"9905
+[v _INT1PPS INT1PPS `VEuc  1 e 1 @15041 ]
+"40402
+[v _T4TMR T4TMR `VEuc  1 e 1 @16286 ]
+"40407
+[v _TMR4 TMR4 `VEuc  1 e 1 @16286 ]
+"40440
+[v _T4PR T4PR `VEuc  1 e 1 @16287 ]
+"40445
+[v _PR4 PR4 `VEuc  1 e 1 @16287 ]
+"40478
+[v _T4CON T4CON `VEuc  1 e 1 @16288 ]
+[s S828 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"40514
+[s S1110 . 1 `uc 1 T4OUTPS 1 0 :4:0 
+`uc 1 T4CKPS 1 0 :3:4 
+`uc 1 T4ON 1 0 :1:7 
+]
+"40514
+[s S1114 . 1 `uc 1 T4OUTPS0 1 0 :1:0 
+`uc 1 T4OUTPS1 1 0 :1:1 
+`uc 1 T4OUTPS2 1 0 :1:2 
+`uc 1 T4OUTPS3 1 0 :1:3 
+`uc 1 T4CKPS0 1 0 :1:4 
+`uc 1 T4CKPS1 1 0 :1:5 
+`uc 1 T4CKPS2 1 0 :1:6 
+]
+"40514
+[s S1122 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+`uc 1 TMR4ON 1 0 :1:7 
+]
+"40514
+[u S1131 . 1 `S828 1 . 1 0 `S1110 1 . 1 0 `S1114 1 . 1 0 `S1122 1 . 1 0 ]
+"40514
+"40514
+[v _T4CONbits T4CONbits `VES1131  1 e 1 @16288 ]
+"40624
+[v _T4HLT T4HLT `VEuc  1 e 1 @16289 ]
+[s S714 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"40657
+[s S719 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+"40657
+[s S1003 . 1 `uc 1 T4MODE 1 0 :5:0 
+`uc 1 T4CKSYNC 1 0 :1:5 
+`uc 1 T4CKPOL 1 0 :1:6 
+`uc 1 T4PSYNC 1 0 :1:7 
+]
+"40657
+[s S1008 . 1 `uc 1 T4MODE0 1 0 :1:0 
+`uc 1 T4MODE1 1 0 :1:1 
+`uc 1 T4MODE2 1 0 :1:2 
+`uc 1 T4MODE3 1 0 :1:3 
+`uc 1 T4MODE4 1 0 :1:4 
+]
+"40657
+[u S1014 . 1 `S714 1 . 1 0 `S719 1 . 1 0 `S1003 1 . 1 0 `S1008 1 . 1 0 ]
+"40657
+"40657
+[v _T4HLTbits T4HLTbits `VES1014  1 e 1 @16289 ]
+"40752
+[v _T4CLKCON T4CLKCON `VEuc  1 e 1 @16290 ]
+"40910
+[v _T4RST T4RST `VEuc  1 e 1 @16291 ]
+[s S790 . 1 `uc 1 RSEL 1 0 :5:0 
+]
+"40937
+[s S792 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+`uc 1 RSEL4 1 0 :1:4 
+]
+"40937
+[s S1076 . 1 `uc 1 T4RSEL 1 0 :5:0 
+]
+"40937
+[s S1078 . 1 `uc 1 T4RSEL0 1 0 :1:0 
+`uc 1 T4RSEL1 1 0 :1:1 
+`uc 1 T4RSEL2 1 0 :1:2 
+`uc 1 T4RSEL3 1 0 :1:3 
+`uc 1 T4RSEL4 1 0 :1:4 
+]
+"40937
+[u S1084 . 1 `S790 1 . 1 0 `S792 1 . 1 0 `S1076 1 . 1 0 `S1078 1 . 1 0 ]
+"40937
+"40937
+[v _T4RSTbits T4RSTbits `VES1084  1 e 1 @16291 ]
+"41878
+[v _T2TMR T2TMR `VEuc  1 e 1 @16298 ]
+"41883
+[v _TMR2 TMR2 `VEuc  1 e 1 @16298 ]
+"41916
+[v _T2PR T2PR `VEuc  1 e 1 @16299 ]
+"41921
+[v _PR2 PR2 `VEuc  1 e 1 @16299 ]
+"41954
+[v _T2CON T2CON `VEuc  1 e 1 @16300 ]
+"41990
+[s S832 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+`uc 1 T2CKPS 1 0 :3:4 
+`uc 1 T2ON 1 0 :1:7 
+]
+"41990
+[s S836 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+`uc 1 T2OUTPS1 1 0 :1:1 
+`uc 1 T2OUTPS2 1 0 :1:2 
+`uc 1 T2OUTPS3 1 0 :1:3 
+`uc 1 T2CKPS0 1 0 :1:4 
+`uc 1 T2CKPS1 1 0 :1:5 
+`uc 1 T2CKPS2 1 0 :1:6 
+]
+"41990
+[s S844 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+`uc 1 TMR2ON 1 0 :1:7 
+]
+"41990
+[u S853 . 1 `S828 1 . 1 0 `S832 1 . 1 0 `S836 1 . 1 0 `S844 1 . 1 0 ]
+"41990
+"41990
+[v _T2CONbits T2CONbits `VES853  1 e 1 @16300 ]
+"42100
+[v _T2HLT T2HLT `VEuc  1 e 1 @16301 ]
+"42133
+"42133
+[s S725 . 1 `uc 1 T2MODE 1 0 :5:0 
+`uc 1 T2CKSYNC 1 0 :1:5 
+`uc 1 T2CKPOL 1 0 :1:6 
+`uc 1 T2PSYNC 1 0 :1:7 
+]
+"42133
+[s S730 . 1 `uc 1 T2MODE0 1 0 :1:0 
+`uc 1 T2MODE1 1 0 :1:1 
+`uc 1 T2MODE2 1 0 :1:2 
+`uc 1 T2MODE3 1 0 :1:3 
+`uc 1 T2MODE4 1 0 :1:4 
+]
+"42133
+[u S736 . 1 `S714 1 . 1 0 `S719 1 . 1 0 `S725 1 . 1 0 `S730 1 . 1 0 ]
+"42133
+"42133
+[v _T2HLTbits T2HLTbits `VES736  1 e 1 @16301 ]
+"42228
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @16302 ]
+"42386
+[v _T2RST T2RST `VEuc  1 e 1 @16303 ]
+"42413
+"42413
+[s S798 . 1 `uc 1 T2RSEL 1 0 :5:0 
+]
+"42413
+[s S800 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+`uc 1 T2RSEL1 1 0 :1:1 
+`uc 1 T2RSEL2 1 0 :1:2 
+`uc 1 T2RSEL3 1 0 :1:3 
+`uc 1 T2RSEL4 1 0 :1:4 
+]
+"42413
+[u S806 . 1 `S790 1 . 1 0 `S792 1 . 1 0 `S798 1 . 1 0 `S800 1 . 1 0 ]
+"42413
+"42413
+[v _T2RSTbits T2RSTbits `VES806  1 e 1 @16303 ]
+"43354
+[v _TMR0L TMR0L `VEuc  1 e 1 @16310 ]
+"43492
+[v _TMR0H TMR0H `VEuc  1 e 1 @16311 ]
+"43746
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @16312 ]
+[s S157 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"43774
+[s S163 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+"43774
+[s S169 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+"43774
+[u S175 . 1 `S157 1 . 1 0 `S163 1 . 1 0 `S169 1 . 1 0 ]
+"43774
+"43774
+[v _T0CON0bits T0CON0bits `VES175  1 e 1 @16312 ]
+"43844
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @16313 ]
+"43986
+[v _LATA LATA `VEuc  1 e 1 @16314 ]
+"44098
+[v _LATB LATB `VEuc  1 e 1 @16315 ]
+[s S1264 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"44125
+[s S1273 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+"44125
+[u S1282 . 1 `S1264 1 . 1 0 `S1273 1 . 1 0 ]
+"44125
+"44125
+[v _LATBbits LATBbits `VES1282  1 e 1 @16315 ]
+"44210
+[v _LATC LATC `VEuc  1 e 1 @16316 ]
+"44322
+[v _TRISA TRISA `VEuc  1 e 1 @16322 ]
+"44384
+[v _TRISB TRISB `VEuc  1 e 1 @16323 ]
+"44446
+[v _TRISC TRISC `VEuc  1 e 1 @16324 ]
+[s S1211 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"44587
+[u S1220 . 1 `S1211 1 . 1 0 ]
+"44587
+"44587
+[v _PORTBbits PORTBbits `VES1220  1 e 1 @16331 ]
+[s S241 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"44735
+[s S249 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"44735
+[u S252 . 1 `S241 1 . 1 0 `S249 1 . 1 0 ]
+"44735
+"44735
+[v _INTCON0bits INTCON0bits `VES252  1 e 1 @16338 ]
+"33 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+[v _lampdata lampdata `VEus  1 e 2 0 ]
+"34
+[v _lampstatus lampstatus `VEus  1 e 2 0 ]
+"35
+[v _pwm_setting pwm_setting `VE[16]us  1 e 32 0 ]
+"36
+[v _pwm_phase pwm_phase `VE[16]uc  1 e 16 0 ]
+"37
+[v _pwm_table pwm_table `C[32]us  1 e 64 0 ]
+"43
+[v _clocks_counter clocks_counter `VEi  1 e 2 0 ]
+"44
+[v _old_clocks_counter old_clocks_counter `VEi  1 e 2 0 ]
+"30 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/ext_int.c
+[v _INT1_InterruptHandler INT1_InterruptHandler `*.37(v  1 e 2 0 ]
+"59 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr0.c
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
+"58 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr2.c
+[v _TMR2_InterruptHandler TMR2_InterruptHandler `*.37(v  1 e 2 0 ]
+"58 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr4.c
+[v _TMR4_InterruptHandler TMR4_InterruptHandler `*.37(v  1 e 2 0 ]
+"170 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"188
+[v main@i i `uc  1 a 1 11 ]
+"189
+[v main@mode mode `uc  1 a 1 10 ]
+"188
+[v main@fading_level fading_level `uc  1 a 1 9 ]
+"257
+} 0
+"153
+[v _my_delay my_delay `(v  1 e 1 0 ]
+{
+"154
+[v my_delay@i i `i  1 a 2 4 ]
+"153
+[v my_delay@val val `i  1 p 2 0 ]
+"161
+} 0
+"155 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr4.c
+[v _TMR4_Period8BitSet TMR4_Period8BitSet `(v  1 e 1 0 ]
+{
+[v TMR4_Period8BitSet@periodVal periodVal `uc  1 a 1 wreg ]
+[v TMR4_Period8BitSet@periodVal periodVal `uc  1 a 1 wreg ]
+"157
+[v TMR4_Period8BitSet@periodVal periodVal `uc  1 a 1 0 ]
+"158
+} 0
+"93 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr0.c
+[v _TMR0_StopTimer TMR0_StopTimer `(v  1 e 1 0 ]
+{
+"97
+} 0
+"87
+[v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
+{
+"91
+} 0
+"50 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"60
+} 0
+"64 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr4.c
+[v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"178
+[v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR4_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"180
+} 0
+"64 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"178
+[v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"180
+} 0
+"61 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"85
+} 0
+"134
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"136
+} 0
+"76 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"55 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"124
+} 0
+"62 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"74
+} 0
+"52 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"59 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/ext_int.c
+[v _EXT_INT_Initialize EXT_INT_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"50
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"52
+} 0
+"91 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManagerLow INTERRUPT_InterruptManagerLow `IIL(v  1 e 1 0 ]
+{
+"106
+} 0
+"165 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr2.c
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+{
+"175
+} 0
+"182
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"185
+} 0
+"114 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+[v _my_pwm_isr my_pwm_isr `(v  1 e 1 0 ]
+{
+"118
+[v my_pwm_isr@tmp2 tmp2 `uc  1 a 1 13 ]
+"117
+[v my_pwm_isr@tmp1 tmp1 `uc  1 a 1 12 ]
+"116
+[v my_pwm_isr@pwm_cnt pwm_cnt `uc  1 s 1 pwm_cnt ]
+"148
+} 0
+"121 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"131
+} 0
+"138
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"141
+} 0
+"68 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+[v _my_antiflicker_isr my_antiflicker_isr `(v  1 e 1 0 ]
+{
+"81
+} 0
+"74 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
+{
+"89
+} 0
+"165 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr4.c
+[v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
+{
+"175
+} 0
+"182
+[v _TMR4_DefaultInterruptHandler TMR4_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"185
+} 0
+"88 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+[v _my_fading_isr my_fading_isr `(v  1 e 1 0 ]
+{
+"90
+[v my_fading_isr@io io `uc  1 a 1 3 ]
+"110
+} 0
+"32 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/ext_int.c
+[v _INT1_ISR INT1_ISR `(v  1 e 1 0 ]
+{
+"38
+} 0
+"41
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+{
+"48
+} 0
+"54
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"57
+} 0
+"48 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+[v _my_Int1_Isr my_Int1_Isr `(v  1 e 1 0 ]
+{
+"62
+} 0
