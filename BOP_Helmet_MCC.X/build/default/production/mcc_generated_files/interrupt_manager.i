@@ -26399,14 +26399,14 @@ void INTERRUPT_Initialize (void)
     IPR5bits.INT1IP = 1;
 
 
-    IPR7bits.TMR4IP = 1;
-
-
 
     IPR3bits.TMR0IP = 0;
 
 
     IPR4bits.TMR2IP = 0;
+
+
+    IPR7bits.TMR4IP = 0;
 
 }
 
@@ -26416,10 +26416,6 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManagerHigh (void)
     if(PIE5bits.INT1IE == 1 && PIR5bits.INT1IF == 1)
     {
         INT1_ISR();
-    }
-    else if(PIE7bits.TMR4IE == 1 && PIR7bits.TMR4IF == 1)
-    {
-        TMR4_ISR();
     }
     else
     {
@@ -26437,6 +26433,10 @@ void __attribute__((picinterrupt(("low_priority")))) INTERRUPT_InterruptManagerL
     else if(PIE4bits.TMR2IE == 1 && PIR4bits.TMR2IF == 1)
     {
         TMR2_ISR();
+    }
+    else if(PIE7bits.TMR4IE == 1 && PIR7bits.TMR4IF == 1)
+    {
+        TMR4_ISR();
     }
     else
     {

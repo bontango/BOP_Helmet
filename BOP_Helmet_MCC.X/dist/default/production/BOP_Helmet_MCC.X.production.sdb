@@ -131,17 +131,19 @@ TMR4_UART2_TX_EDGE 24
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"58 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+"65 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
 [v _my_Int1_Isr my_Int1_Isr `(v  1 e 1 0 ]
-"81
+"88
 [v _my_antiflicker_isr my_antiflicker_isr `(v  1 e 1 0 ]
-"101
+"110
 [v _my_fading_isr my_fading_isr `(v  1 e 1 0 ]
-"127
+"136
 [v _my_pwm_isr my_pwm_isr `(v  1 e 1 0 ]
-"166
+"175
 [v _my_delay my_delay `(v  1 e 1 0 ]
-"183
+"186
+[v _blinkFw blinkFw `(v  1 s 1 blinkFw ]
+"216
 [v _main main `(v  1 e 1 0 ]
 "32 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/ext_int.c
 [v _INT1_ISR INT1_ISR `(v  1 e 1 0 ]
@@ -157,7 +159,7 @@ TMR4_UART2_TX_EDGE 24
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "74
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
-"91
+"87
 [v _INTERRUPT_InterruptManagerLow INTERRUPT_InterruptManagerLow `IIL(v  1 e 1 0 ]
 "50 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -215,7 +217,7 @@ TMR4_UART2_TX_EDGE 24
 [v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
 "182
 [v _TMR4_DefaultInterruptHandler TMR4_DefaultInterruptHandler `(v  1 e 1 0 ]
-[s S305 . 1 `uc 1 I2C1TXIP 1 0 :1:0 
+[s S288 . 1 `uc 1 I2C1TXIP 1 0 :1:0 
 `uc 1 I2C1IP 1 0 :1:1 
 `uc 1 I2C1EIP 1 0 :1:2 
 `uc 1 U1RXIP 1 0 :1:3 
@@ -225,9 +227,9 @@ TMR4_UART2_TX_EDGE 24
 `uc 1 TMR0IP 1 0 :1:7 
 ]
 "2969 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f25k42.h
-[u S314 . 1 `S305 1 . 1 0 ]
-[v _IPR3bits IPR3bits `VES314  1 e 1 @14723 ]
-[s S326 . 1 `uc 1 TMR1IP 1 0 :1:0 
+[u S297 . 1 `S288 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES297  1 e 1 @14723 ]
+[s S309 . 1 `uc 1 TMR1IP 1 0 :1:0 
 `uc 1 TMR1GIP 1 0 :1:1 
 `uc 1 TMR2IP 1 0 :1:2 
 `uc 1 CCP1IP 1 0 :1:3 
@@ -237,8 +239,8 @@ TMR4_UART2_TX_EDGE 24
 `uc 1 CLC1IP 1 0 :1:7 
 ]
 "3031
-[u S335 . 1 `S326 1 . 1 0 ]
-[v _IPR4bits IPR4bits `VES335  1 e 1 @14724 ]
+[u S318 . 1 `S309 1 . 1 0 ]
+[v _IPR4bits IPR4bits `VES318  1 e 1 @14724 ]
 [s S267 . 1 `uc 1 INT1IP 1 0 :1:0 
 `uc 1 C2IP 1 0 :1:1 
 `uc 1 DMA2SCNTIP 1 0 :1:2 
@@ -251,7 +253,7 @@ TMR4_UART2_TX_EDGE 24
 "3088
 [u S276 . 1 `S267 1 . 1 0 ]
 [v _IPR5bits IPR5bits `VES276  1 e 1 @14725 ]
-[s S288 . 1 `uc 1 TMR4IP 1 0 :1:0 
+[s S330 . 1 `uc 1 TMR4IP 1 0 :1:0 
 `uc 1 CCP2IP 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 CWG2IP 1 0 :1:3 
@@ -259,8 +261,8 @@ TMR4_UART2_TX_EDGE 24
 `uc 1 INT2IP 1 0 :1:5 
 ]
 "3210
-[u S295 . 1 `S288 1 . 1 0 ]
-[v _IPR7bits IPR7bits `VES295  1 e 1 @14727 ]
+[u S337 . 1 `S330 1 . 1 0 ]
+[v _IPR7bits IPR7bits `VES337  1 e 1 @14727 ]
 [s S125 . 1 `uc 1 I2C1TXIE 1 0 :1:0 
 `uc 1 I2C1IE 1 0 :1:1 
 `uc 1 I2C1EIE 1 0 :1:2 
@@ -273,7 +275,7 @@ TMR4_UART2_TX_EDGE 24
 "3534
 [u S134 . 1 `S125 1 . 1 0 ]
 [v _PIE3bits PIE3bits `VES134  1 e 1 @14739 ]
-[s S456 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S418 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR1GIE 1 0 :1:1 
 `uc 1 TMR2IE 1 0 :1:2 
 `uc 1 CCP1IE 1 0 :1:3 
@@ -283,8 +285,8 @@ TMR4_UART2_TX_EDGE 24
 `uc 1 CLC1IE 1 0 :1:7 
 ]
 "3596
-[u S465 . 1 `S456 1 . 1 0 ]
-[v _PIE4bits PIE4bits `VES465  1 e 1 @14740 ]
+[u S427 . 1 `S418 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES427  1 e 1 @14740 ]
 [s S347 . 1 `uc 1 INT1IE 1 0 :1:0 
 `uc 1 C2IE 1 0 :1:1 
 `uc 1 DMA2SCNTIE 1 0 :1:2 
@@ -297,7 +299,7 @@ TMR4_UART2_TX_EDGE 24
 "3653
 [u S356 . 1 `S347 1 . 1 0 ]
 [v _PIE5bits PIE5bits `VES356  1 e 1 @14741 ]
-[s S393 . 1 `uc 1 TMR4IE 1 0 :1:0 
+[s S464 . 1 `uc 1 TMR4IE 1 0 :1:0 
 `uc 1 CCP2IE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 CWG2IE 1 0 :1:3 
@@ -305,8 +307,8 @@ TMR4_UART2_TX_EDGE 24
 `uc 1 INT2IE 1 0 :1:5 
 ]
 "3775
-[u S400 . 1 `S393 1 . 1 0 ]
-[v _PIE7bits PIE7bits `VES400  1 e 1 @14743 ]
+[u S471 . 1 `S464 1 . 1 0 ]
+[v _PIE7bits PIE7bits `VES471  1 e 1 @14743 ]
 [s S104 . 1 `uc 1 I2C1TXIF 1 0 :1:0 
 `uc 1 I2C1IF 1 0 :1:1 
 `uc 1 I2C1EIF 1 0 :1:2 
@@ -319,7 +321,7 @@ TMR4_UART2_TX_EDGE 24
 "4099
 [u S113 . 1 `S104 1 . 1 0 ]
 [v _PIR3bits PIR3bits `VES113  1 e 1 @14755 ]
-[s S477 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S439 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR1GIF 1 0 :1:1 
 `uc 1 TMR2IF 1 0 :1:2 
 `uc 1 CCP1IF 1 0 :1:3 
@@ -329,8 +331,8 @@ TMR4_UART2_TX_EDGE 24
 `uc 1 CLC1IF 1 0 :1:7 
 ]
 "4161
-[u S486 . 1 `S477 1 . 1 0 ]
-[v _PIR4bits PIR4bits `VES486  1 e 1 @14756 ]
+[u S448 . 1 `S439 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES448  1 e 1 @14756 ]
 [s S368 . 1 `uc 1 INT1IF 1 0 :1:0 
 `uc 1 C2IF 1 0 :1:1 
 `uc 1 DMA2SCNTIF 1 0 :1:2 
@@ -343,7 +345,7 @@ TMR4_UART2_TX_EDGE 24
 "4218
 [u S377 . 1 `S368 1 . 1 0 ]
 [v _PIR5bits PIR5bits `VES377  1 e 1 @14757 ]
-[s S410 . 1 `uc 1 TMR4IF 1 0 :1:0 
+[s S481 . 1 `uc 1 TMR4IF 1 0 :1:0 
 `uc 1 CCP2IF 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 CWG2IF 1 0 :1:3 
@@ -351,8 +353,8 @@ TMR4_UART2_TX_EDGE 24
 `uc 1 INT2IF 1 0 :1:5 
 ]
 "4340
-[u S417 . 1 `S410 1 . 1 0 ]
-[v _PIR7bits PIR7bits `VES417  1 e 1 @14759 ]
+[u S488 . 1 `S481 1 . 1 0 ]
+[v _PIR7bits PIR7bits `VES488  1 e 1 @14759 ]
 "4461
 [v _PMD0 PMD0 `VEuc  1 e 1 @14784 ]
 "4523
@@ -706,19 +708,19 @@ TMR4_UART2_TX_EDGE 24
 "44735
 "44735
 [v _INTCON0bits INTCON0bits `VES252  1 e 1 @16338 ]
-"43 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+"50 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
 [v _lampdata lampdata `VEus  1 e 2 0 ]
-"44
+"51
 [v _lampstatus lampstatus `VEus  1 e 2 0 ]
-"45
+"52
 [v _pwm_setting pwm_setting `VE[16]us  1 e 32 0 ]
-"46
-[v _pwm_phase pwm_phase `VE[16]uc  1 e 16 0 ]
-"47
-[v _pwm_table pwm_table `C[32]us  1 e 64 0 ]
 "53
-[v _clocks_counter clocks_counter `VEi  1 e 2 0 ]
+[v _pwm_phase pwm_phase `VE[16]uc  1 e 16 0 ]
 "54
+[v _pwm_table pwm_table `C[32]us  1 e 64 0 ]
+"60
+[v _clocks_counter clocks_counter `VEi  1 e 2 0 ]
+"61
 [v _old_clocks_counter old_clocks_counter `VEi  1 e 2 0 ]
 "30 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/ext_int.c
 [v _INT1_InterruptHandler INT1_InterruptHandler `*.37(v  1 e 2 0 ]
@@ -728,25 +730,37 @@ TMR4_UART2_TX_EDGE 24
 [v _TMR2_InterruptHandler TMR2_InterruptHandler `*.37(v  1 e 2 0 ]
 "58 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr4.c
 [v _TMR4_InterruptHandler TMR4_InterruptHandler `*.37(v  1 e 2 0 ]
-"183 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+"216 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"201
-[v main@i i `uc  1 a 1 11 ]
-"202
-[v main@mode mode `uc  1 a 1 10 ]
-"201
-[v main@fading_level fading_level `uc  1 a 1 9 ]
-"275
+"234
+[v main@i i `uc  1 a 1 30 ]
+"235
+[v main@mode mode `uc  1 a 1 29 ]
+"234
+[v main@fading_level fading_level `uc  1 a 1 28 ]
+"303
 } 0
-"166
+"186
+[v _blinkFw blinkFw `(v  1 s 1 blinkFw ]
+{
+"188
+[v blinkFw@pos pos `uc  1 a 1 24 ]
+[v blinkFw@nval nval `uc  1 a 1 23 ]
+[v blinkFw@blink blink `uc  1 a 1 22 ]
+[v blinkFw@pause pause `uc  1 a 1 21 ]
+"186
+[v blinkFw@version version `*.31uc  1 p 1 19 ]
+"211
+} 0
+"175
 [v _my_delay my_delay `(v  1 e 1 0 ]
 {
-"167
-[v my_delay@i i `i  1 a 2 4 ]
-"166
-[v my_delay@val val `i  1 p 2 0 ]
-"174
+"176
+[v my_delay@i i `i  1 a 2 17 ]
+"175
+[v my_delay@val val `i  1 p 2 13 ]
+"183
 } 0
 "155 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr4.c
 [v _TMR4_Period8BitSet TMR4_Period8BitSet `(v  1 e 1 0 ]
@@ -754,7 +768,7 @@ TMR4_UART2_TX_EDGE 24
 [v TMR4_Period8BitSet@periodVal periodVal `uc  1 a 1 wreg ]
 [v TMR4_Period8BitSet@periodVal periodVal `uc  1 a 1 wreg ]
 "157
-[v TMR4_Period8BitSet@periodVal periodVal `uc  1 a 1 0 ]
+[v TMR4_Period8BitSet@periodVal periodVal `uc  1 a 1 13 ]
 "158
 } 0
 "93 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr0.c
@@ -780,7 +794,7 @@ TMR4_UART2_TX_EDGE 24
 "178
 [v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR4_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+[v TMR4_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 13 ]
 "180
 } 0
 "64 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr2.c
@@ -791,7 +805,7 @@ TMR4_UART2_TX_EDGE 24
 "178
 [v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 13 ]
 "180
 } 0
 "61 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr0.c
@@ -802,7 +816,7 @@ TMR4_UART2_TX_EDGE 24
 "134
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 13 ]
 "136
 } 0
 "76 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/mcc.c
@@ -833,54 +847,13 @@ TMR4_UART2_TX_EDGE 24
 "50
 [v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 13 ]
 "52
 } 0
-"91 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/interrupt_manager.c
+"87 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManagerLow INTERRUPT_InterruptManagerLow `IIL(v  1 e 1 0 ]
 {
 "106
-} 0
-"165 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr2.c
-[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
-{
-"175
-} 0
-"182
-[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
-{
-"185
-} 0
-"127 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
-[v _my_pwm_isr my_pwm_isr `(v  1 e 1 0 ]
-{
-"131
-[v my_pwm_isr@tmp2 tmp2 `uc  1 a 1 13 ]
-"130
-[v my_pwm_isr@tmp1 tmp1 `uc  1 a 1 12 ]
-"129
-[v my_pwm_isr@pwm_cnt pwm_cnt `uc  1 s 1 pwm_cnt ]
-"161
-} 0
-"121 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr0.c
-[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
-{
-"131
-} 0
-"138
-[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
-{
-"141
-} 0
-"81 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
-[v _my_antiflicker_isr my_antiflicker_isr `(v  1 e 1 0 ]
-{
-"94
-} 0
-"74 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/interrupt_manager.c
-[v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
-{
-"89
 } 0
 "165 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr4.c
 [v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
@@ -892,12 +865,53 @@ TMR4_UART2_TX_EDGE 24
 {
 "185
 } 0
-"101 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+"110 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
 [v _my_fading_isr my_fading_isr `(v  1 e 1 0 ]
 {
+"112
+[v my_fading_isr@io io `uc  1 a 1 5 ]
+"132
+} 0
+"165 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr2.c
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+{
+"175
+} 0
+"182
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"185
+} 0
+"136 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+[v _my_pwm_isr my_pwm_isr `(v  1 e 1 0 ]
+{
+"140
+[v my_pwm_isr@tmp2 tmp2 `uc  1 a 1 5 ]
+"139
+[v my_pwm_isr@tmp1 tmp1 `uc  1 a 1 4 ]
+"138
+[v my_pwm_isr@pwm_cnt pwm_cnt `uc  1 s 1 pwm_cnt ]
+"170
+} 0
+"121 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"131
+} 0
+"138
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"141
+} 0
+"88 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+[v _my_antiflicker_isr my_antiflicker_isr `(v  1 e 1 0 ]
+{
 "103
-[v my_fading_isr@io io `uc  1 a 1 3 ]
-"123
+} 0
+"74 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
+{
+"85
 } 0
 "32 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\mcc_generated_files/ext_int.c
 [v _INT1_ISR INT1_ISR `(v  1 e 1 0 ]
@@ -914,8 +928,8 @@ TMR4_UART2_TX_EDGE 24
 {
 "57
 } 0
-"58 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
+"65 N:\Projekte\misc\Bop Helm LED\MPLABX\BOP_Helmet_MCC.X\main.c
 [v _my_Int1_Isr my_Int1_Isr `(v  1 e 1 0 ]
 {
-"75
+"82
 } 0

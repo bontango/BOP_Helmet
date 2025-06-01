@@ -13,6 +13,8 @@
  * added Blinkcode to show Versiom at start
  * v102
  * corrected Data signaling
+ * v103 
+ * changed blinkcode
  * 
  *  */
 
@@ -24,7 +26,10 @@
 #pragma warning disable 520
 
 //Version for Blink Code
-#define VERSION 2
+#define VERSION "103" // FW Version string (three numbers as char e.g '100')
+
+#define MODE_TEST 1
+#define MODE_RUN 0
 
 //Fading
 #define FAD_T_O 3  //ON ON no fading
@@ -177,9 +182,33 @@ void my_delay( int val) {
     
 }    
 
-#define MODE_TEST 1
-#define MODE_RUN 0
-
+// FW version blinking
+static void blinkFw(char* version)
+{
+uint8_t pos, nval, blink, pause;
+my_delay(7);
+for (pos = 0; pos < 3; pos++) {
+nval = version[pos] - '0';
+if (nval) {
+for (blink = 0; blink < nval; blink++)
+{
+LED2_SetHigh(); // if '1'-'9', then D1 flashes x times
+my_delay(1);
+LED2_SetLow(); // LED2 OFF (D1)
+my_delay(1);
+}
+pause = 10 - nval;
+my_delay(pause);
+}
+else {
+LED1_SetHigh(); // if '0', then D2 flashes 1 time
+my_delay(1);
+LED1_SetLow(); // LED1 OFF (D2)
+my_delay(9);
+}
+}
+my_delay(9);
+}
 
 /*
                          Main application
@@ -217,16 +246,11 @@ for( i=0; i<5; i++) {
     LED2_SetLow(); LED1_SetLow();
     my_delay(1);    
 }
-//LED2 Blinkcode to show Versio at start
-for( i=0; i<VERSION; i++) {
-    LED2_SetHigh();
-    my_delay(3);
-    LED2_SetLow();
-    my_delay(3);    
-}
+
+//Version as Blinkcode
+blinkFw(VERSION);
 
 //ON indicator
-my_delay(5);
 LED2_SetHigh();
 
 //enable interrupts

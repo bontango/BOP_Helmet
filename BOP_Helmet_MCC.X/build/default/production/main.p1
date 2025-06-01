@@ -2229,22 +2229,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "46155
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\pic\include\proc\pic18f25k42.h: 46155: __asm("TOSU equ 03FFFh");
 [; <" TOSU equ 03FFFh ;# ">
-"22 main.c
+"26 main.c
 [p n 520 ]
-"43
-[; ;main.c: 43: volatile uint16_t lampdata;
+"50
+[; ;main.c: 50: volatile uint16_t lampdata;
 [v _lampdata `Vus ~T0 @X0 1 e ]
-"44
-[; ;main.c: 44: volatile uint16_t lampstatus;
+"51
+[; ;main.c: 51: volatile uint16_t lampstatus;
 [v _lampstatus `Vus ~T0 @X0 1 e ]
-"45
-[; ;main.c: 45: volatile uint16_t pwm_setting[16];
+"52
+[; ;main.c: 52: volatile uint16_t pwm_setting[16];
 [v _pwm_setting `Vus ~T0 @X0 -> 16 `i e ]
-"46
-[; ;main.c: 46: volatile uint8_t pwm_phase[16];
+"53
+[; ;main.c: 53: volatile uint8_t pwm_phase[16];
 [v _pwm_phase `Vuc ~T0 @X0 -> 16 `i e ]
-"47
-[; ;main.c: 47: const uint16_t pwm_table[32] =
+"54
+[; ;main.c: 54: const uint16_t pwm_table[32] =
 [v _pwm_table `Cus ~T0 @X0 -> 32 `i e ]
 [i _pwm_table
 :U ..
@@ -2282,625 +2282,728 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 255 `i `us
 ..
 ]
-"53
-[; ;main.c: 53: volatile int clocks_counter;
+"60
+[; ;main.c: 60: volatile int clocks_counter;
 [v _clocks_counter `Vi ~T0 @X0 1 e ]
-"54
-[; ;main.c: 54: volatile int old_clocks_counter;
+"61
+[; ;main.c: 61: volatile int old_clocks_counter;
 [v _old_clocks_counter `Vi ~T0 @X0 1 e ]
-"58
-[; ;main.c: 58: void my_Int1_Isr(void) {
+"65
+[; ;main.c: 65: void my_Int1_Isr(void) {
 [v _my_Int1_Isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _my_Int1_Isr ]
 [f ]
-"61
-[; ;main.c: 61:   lampdata = ( lampdata << 1);
+"68
+[; ;main.c: 68:   lampdata = ( lampdata << 1);
 [e = _lampdata -> << -> _lampdata `ui -> 1 `i `us ]
-"64
-[; ;main.c: 64:   if (PORTBbits.RB0 == 0)
+"71
+[; ;main.c: 71:   if (PORTBbits.RB0 == 0)
 [e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 2123  ]
-"65
-[; ;main.c: 65:       lampdata &= (~(1u << 0));
+"72
+[; ;main.c: 72:       lampdata &= (~(1u << 0));
 [e =& _lampdata -> ~ << -> 1 `ui -> 0 `i `Vus ]
 [e $U 2124  ]
-"66
-[; ;main.c: 66:   else
+"73
+[; ;main.c: 73:   else
 [e :U 2123 ]
-"67
-[; ;main.c: 67:       lampdata |= (1u << 0);
+"74
+[; ;main.c: 74:       lampdata |= (1u << 0);
 [e =| _lampdata -> << -> 1 `ui -> 0 `i `Vus ]
 [e :U 2124 ]
-"70
-[; ;main.c: 70:   clocks_counter++;
+"77
+[; ;main.c: 77:   clocks_counter++;
 [e ++ _clocks_counter -> -> 1 `i `Vi ]
-"72
-[; ;main.c: 72:   LATBbits.LATB3 = PORTBbits.RB1;
-[e = . . _LATBbits 0 3 . . _PORTBbits 0 1 ]
-"75
-[; ;main.c: 75: }
+"79
+[; ;main.c: 79:   do { LATBbits.LATB2 = 1; } while(0);
+[e :U 2127 ]
+{
+[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 2126 ]
+"82
+[; ;main.c: 82: }
 [e :UE 2122 ]
 }
-"81
-[; ;main.c: 81: void my_antiflicker_isr(void) {
+"88
+[; ;main.c: 88: void my_antiflicker_isr(void) {
 [v _my_antiflicker_isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _my_antiflicker_isr ]
 [f ]
-"84
-[; ;main.c: 84:     if ( clocks_counter == old_clocks_counter ) {
-[e $ ! == _clocks_counter _old_clocks_counter 2126  ]
-{
-"86
-[; ;main.c: 86:         lampstatus = lampdata;
-[e = _lampstatus _lampdata ]
-"88
-[; ;main.c: 88:         clocks_counter = old_clocks_counter = 0;
-[e = _clocks_counter = _old_clocks_counter -> 0 `i ]
-"89
-[; ;main.c: 89:     }
-}
-[e $U 2127  ]
-"90
-[; ;main.c: 90:     else
-[e :U 2126 ]
 "91
-[; ;main.c: 91:     {
+[; ;main.c: 91:     if ( clocks_counter == old_clocks_counter ) {
+[e $ ! == _clocks_counter _old_clocks_counter 2129  ]
 {
-"92
-[; ;main.c: 92:        old_clocks_counter = clocks_counter;
-[e = _old_clocks_counter _clocks_counter ]
 "93
-[; ;main.c: 93:     }
+[; ;main.c: 93:         lampstatus = lampdata;
+[e = _lampstatus _lampdata ]
+"95
+[; ;main.c: 95:         clocks_counter = old_clocks_counter = 0;
+[e = _clocks_counter = _old_clocks_counter -> 0 `i ]
+"97
+[; ;main.c: 97:         do { LATBbits.LATB2 = 0; } while(0);
+[e :U 2132 ]
+{
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 2127 ]
-"94
-[; ;main.c: 94: }
-[e :UE 2125 ]
+[e :U 2131 ]
+"98
+[; ;main.c: 98:     }
 }
+[e $U 2133  ]
+"99
+[; ;main.c: 99:     else
+[e :U 2129 ]
+"100
+[; ;main.c: 100:     {
+{
 "101
-[; ;main.c: 101: void my_fading_isr(void) {
+[; ;main.c: 101:        old_clocks_counter = clocks_counter;
+[e = _old_clocks_counter _clocks_counter ]
+"102
+[; ;main.c: 102:     }
+}
+[e :U 2133 ]
+"103
+[; ;main.c: 103: }
+[e :UE 2128 ]
+}
+"110
+[; ;main.c: 110: void my_fading_isr(void) {
 [v _my_fading_isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _my_fading_isr ]
 [f ]
-"103
-[; ;main.c: 103:     uint8_t io;
+"112
+[; ;main.c: 112:     uint8_t io;
 [v _io `uc ~T0 @X0 1 a ]
-"108
-[; ;main.c: 108:     for (io=0; io<=15; io++) {
+"117
+[; ;main.c: 117:     for (io=0; io<=15; io++) {
 {
 [e = _io -> -> 0 `i `uc ]
-[e $ <= -> _io `i -> 15 `i 2129  ]
-[e $U 2130  ]
-[e :U 2129 ]
-{
-"110
-[; ;main.c: 110:         if ( ((lampstatus) & (1u << (io))) == 0) {
-[e $ ! == & -> _lampstatus `ui << -> 1 `ui -> _io `i -> -> 0 `i `ui 2132  ]
-{
-"111
-[; ;main.c: 111:             if (pwm_phase[io] != 0) {
-[e $ ! != -> *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux `i -> 0 `i 2133  ]
-{
-"112
-[; ;main.c: 112:             --pwm_phase[io];
-[e =- *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux -> -> 1 `i `uc ]
-"113
-[; ;main.c: 113:             pwm_setting[io] = pwm_table[pwm_phase[io]];
-[e = *U + &U _pwm_setting * -> _io `ux -> -> # *U &U _pwm_setting `ui `ux *U + &U _pwm_table * -> *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux `ux -> -> # *U &U _pwm_table `ui `ux ]
-"114
-[; ;main.c: 114:             }
-}
-[e :U 2133 ]
-"115
-[; ;main.c: 115:         }
-}
-[e $U 2134  ]
-"116
-[; ;main.c: 116:         else {
-[e :U 2132 ]
-{
-"117
-[; ;main.c: 117:             if (pwm_phase[io] != 31) {
-[e $ ! != -> *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux `i -> 31 `i 2135  ]
-{
-"118
-[; ;main.c: 118:             ++pwm_phase[io];
-[e =+ *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux -> -> 1 `i `uc ]
-"119
-[; ;main.c: 119:             pwm_setting[io] = pwm_table[pwm_phase[io]];
-[e = *U + &U _pwm_setting * -> _io `ux -> -> # *U &U _pwm_setting `ui `ux *U + &U _pwm_table * -> *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux `ux -> -> # *U &U _pwm_table `ui `ux ]
-"120
-[; ;main.c: 120:             }
-}
+[e $ <= -> _io `i -> 15 `i 2135  ]
+[e $U 2136  ]
 [e :U 2135 ]
+{
+"119
+[; ;main.c: 119:         if ( ((lampstatus) & (1u << (io))) == 0) {
+[e $ ! == & -> _lampstatus `ui << -> 1 `ui -> _io `i -> -> 0 `i `ui 2138  ]
+{
+"120
+[; ;main.c: 120:             if (pwm_phase[io] != 0) {
+[e $ ! != -> *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux `i -> 0 `i 2139  ]
+{
 "121
-[; ;main.c: 121:         }
-}
-[e :U 2134 ]
+[; ;main.c: 121:             --pwm_phase[io];
+[e =- *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux -> -> 1 `i `uc ]
 "122
-[; ;main.c: 122:     }
+[; ;main.c: 122:             pwm_setting[io] = pwm_table[pwm_phase[io]];
+[e = *U + &U _pwm_setting * -> _io `ux -> -> # *U &U _pwm_setting `ui `ux *U + &U _pwm_table * -> *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux `ux -> -> # *U &U _pwm_table `ui `ux ]
+"123
+[; ;main.c: 123:             }
+}
+[e :U 2139 ]
+"124
+[; ;main.c: 124:         }
+}
+[e $U 2140  ]
+"125
+[; ;main.c: 125:         else {
+[e :U 2138 ]
+{
+"126
+[; ;main.c: 126:             if (pwm_phase[io] != 31) {
+[e $ ! != -> *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux `i -> 31 `i 2141  ]
+{
+"127
+[; ;main.c: 127:             ++pwm_phase[io];
+[e =+ *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux -> -> 1 `i `uc ]
+"128
+[; ;main.c: 128:             pwm_setting[io] = pwm_table[pwm_phase[io]];
+[e = *U + &U _pwm_setting * -> _io `ux -> -> # *U &U _pwm_setting `ui `ux *U + &U _pwm_table * -> *U + &U _pwm_phase * -> _io `ux -> -> # *U &U _pwm_phase `ui `ux `ux -> -> # *U &U _pwm_table `ui `ux ]
+"129
+[; ;main.c: 129:             }
+}
+[e :U 2141 ]
+"130
+[; ;main.c: 130:         }
+}
+[e :U 2140 ]
+"131
+[; ;main.c: 131:     }
 }
 [e ++ _io -> -> 1 `i `uc ]
-[e $ <= -> _io `i -> 15 `i 2129  ]
-[e :U 2130 ]
+[e $ <= -> _io `i -> 15 `i 2135  ]
+[e :U 2136 ]
 }
-"123
-[; ;main.c: 123: }
-[e :UE 2128 ]
+"132
+[; ;main.c: 132: }
+[e :UE 2134 ]
 }
-"127
-[; ;main.c: 127: void my_pwm_isr(void) {
+"136
+[; ;main.c: 136: void my_pwm_isr(void) {
 [v _my_pwm_isr `(v ~T0 @X0 1 ef ]
 {
 [e :U _my_pwm_isr ]
 [f ]
-"129
-[; ;main.c: 129:     static uint8_t pwm_cnt=0;
+"138
+[; ;main.c: 138:     static uint8_t pwm_cnt=0;
 [v F15915 `uc ~T0 @X0 1 s pwm_cnt ]
 [i F15915
 -> -> 0 `i `uc
 ]
-"130
-[; ;main.c: 130:     uint8_t tmp1 = 0;
+"139
+[; ;main.c: 139:     uint8_t tmp1 = 0;
 [v _tmp1 `uc ~T0 @X0 1 a ]
 [e = _tmp1 -> -> 0 `i `uc ]
-"131
-[; ;main.c: 131:     uint8_t tmp2 = 0;
+"140
+[; ;main.c: 140:     uint8_t tmp2 = 0;
 [v _tmp2 `uc ~T0 @X0 1 a ]
 [e = _tmp2 -> -> 0 `i `uc ]
-"135
-[; ;main.c: 135:     if (pwm_setting[0] > pwm_cnt) tmp1 |= (1<<0);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 0 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2137  ]
-[e =| _tmp1 -> << -> 1 `i -> 0 `i `uc ]
-[e :U 2137 ]
-"136
-[; ;main.c: 136:     if (pwm_setting[1] > pwm_cnt) tmp1 |= (1<<1);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 1 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2138  ]
-[e =| _tmp1 -> << -> 1 `i -> 1 `i `uc ]
-[e :U 2138 ]
-"137
-[; ;main.c: 137:     if (pwm_setting[2] > pwm_cnt) tmp1 |= (1<<2);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 2 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2139  ]
-[e =| _tmp1 -> << -> 1 `i -> 2 `i `uc ]
-[e :U 2139 ]
-"138
-[; ;main.c: 138:     if (pwm_setting[3] > pwm_cnt) tmp1 |= (1<<3);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 3 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2140  ]
-[e =| _tmp1 -> << -> 1 `i -> 3 `i `uc ]
-[e :U 2140 ]
-"139
-[; ;main.c: 139:     if (pwm_setting[4] > pwm_cnt) tmp1 |= (1<<4);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 4 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2141  ]
-[e =| _tmp1 -> << -> 1 `i -> 4 `i `uc ]
-[e :U 2141 ]
-"140
-[; ;main.c: 140:     if (pwm_setting[5] > pwm_cnt) tmp1 |= (1<<5);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 5 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2142  ]
-[e =| _tmp1 -> << -> 1 `i -> 5 `i `uc ]
-[e :U 2142 ]
-"141
-[; ;main.c: 141:     if (pwm_setting[6] > pwm_cnt) tmp1 |= (1<<6);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 6 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2143  ]
-[e =| _tmp1 -> << -> 1 `i -> 6 `i `uc ]
-[e :U 2143 ]
-"142
-[; ;main.c: 142:     if (pwm_setting[7] > pwm_cnt) tmp1 |= (1<<7);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 7 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2144  ]
-[e =| _tmp1 -> << -> 1 `i -> 7 `i `uc ]
-[e :U 2144 ]
 "144
-[; ;main.c: 144:     if (pwm_setting[8] > pwm_cnt) tmp2 |= (1<<0);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 8 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2145  ]
-[e =| _tmp2 -> << -> 1 `i -> 0 `i `uc ]
-[e :U 2145 ]
+[; ;main.c: 144:     if (pwm_setting[0] > pwm_cnt) tmp1 |= (1<<0);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 0 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2143  ]
+[e =| _tmp1 -> << -> 1 `i -> 0 `i `uc ]
+[e :U 2143 ]
 "145
-[; ;main.c: 145:     if (pwm_setting[9] > pwm_cnt) tmp2 |= (1<<1);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 9 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2146  ]
-[e =| _tmp2 -> << -> 1 `i -> 1 `i `uc ]
-[e :U 2146 ]
+[; ;main.c: 145:     if (pwm_setting[1] > pwm_cnt) tmp1 |= (1<<1);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 1 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2144  ]
+[e =| _tmp1 -> << -> 1 `i -> 1 `i `uc ]
+[e :U 2144 ]
 "146
-[; ;main.c: 146:     if (pwm_setting[10] > pwm_cnt) tmp2 |= (1<<2);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 10 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2147  ]
-[e =| _tmp2 -> << -> 1 `i -> 2 `i `uc ]
-[e :U 2147 ]
+[; ;main.c: 146:     if (pwm_setting[2] > pwm_cnt) tmp1 |= (1<<2);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 2 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2145  ]
+[e =| _tmp1 -> << -> 1 `i -> 2 `i `uc ]
+[e :U 2145 ]
 "147
-[; ;main.c: 147:     if (pwm_setting[11] > pwm_cnt) tmp2 |= (1<<3);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 11 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2148  ]
-[e =| _tmp2 -> << -> 1 `i -> 3 `i `uc ]
-[e :U 2148 ]
+[; ;main.c: 147:     if (pwm_setting[3] > pwm_cnt) tmp1 |= (1<<3);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 3 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2146  ]
+[e =| _tmp1 -> << -> 1 `i -> 3 `i `uc ]
+[e :U 2146 ]
 "148
-[; ;main.c: 148:     if (pwm_setting[12] > pwm_cnt) tmp2 |= (1<<4);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 12 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2149  ]
-[e =| _tmp2 -> << -> 1 `i -> 4 `i `uc ]
-[e :U 2149 ]
+[; ;main.c: 148:     if (pwm_setting[4] > pwm_cnt) tmp1 |= (1<<4);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 4 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2147  ]
+[e =| _tmp1 -> << -> 1 `i -> 4 `i `uc ]
+[e :U 2147 ]
 "149
-[; ;main.c: 149:     if (pwm_setting[13] > pwm_cnt) tmp2 |= (1<<5);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 13 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2150  ]
-[e =| _tmp2 -> << -> 1 `i -> 5 `i `uc ]
-[e :U 2150 ]
+[; ;main.c: 149:     if (pwm_setting[5] > pwm_cnt) tmp1 |= (1<<5);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 5 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2148  ]
+[e =| _tmp1 -> << -> 1 `i -> 5 `i `uc ]
+[e :U 2148 ]
 "150
-[; ;main.c: 150:     if (pwm_setting[14] > pwm_cnt) tmp2 |= (1<<6);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 14 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2151  ]
-[e =| _tmp2 -> << -> 1 `i -> 6 `i `uc ]
-[e :U 2151 ]
+[; ;main.c: 150:     if (pwm_setting[6] > pwm_cnt) tmp1 |= (1<<6);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 6 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2149  ]
+[e =| _tmp1 -> << -> 1 `i -> 6 `i `uc ]
+[e :U 2149 ]
 "151
-[; ;main.c: 151:     if (pwm_setting[15] > pwm_cnt) tmp2 |= (1<<7);
-[e $ ! > -> *U + &U _pwm_setting * -> -> -> 15 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2152  ]
-[e =| _tmp2 -> << -> 1 `i -> 7 `i `uc ]
-[e :U 2152 ]
+[; ;main.c: 151:     if (pwm_setting[7] > pwm_cnt) tmp1 |= (1<<7);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 7 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2150  ]
+[e =| _tmp1 -> << -> 1 `i -> 7 `i `uc ]
+[e :U 2150 ]
 "153
-[; ;main.c: 153:     LATA = tmp1;
-[e = _LATA _tmp1 ]
+[; ;main.c: 153:     if (pwm_setting[8] > pwm_cnt) tmp2 |= (1<<0);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 8 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2151  ]
+[e =| _tmp2 -> << -> 1 `i -> 0 `i `uc ]
+[e :U 2151 ]
 "154
-[; ;main.c: 154:     LATC = tmp2;
-[e = _LATC _tmp2 ]
-"156
-[; ;main.c: 156:     if (pwm_cnt==254)
-[e $ ! == -> F15915 `i -> 254 `i 2153  ]
-"157
-[; ;main.c: 157:         pwm_cnt=0;
-[e = F15915 -> -> 0 `i `uc ]
-[e $U 2154  ]
-"158
-[; ;main.c: 158:     else
+[; ;main.c: 154:     if (pwm_setting[9] > pwm_cnt) tmp2 |= (1<<1);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 9 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2152  ]
+[e =| _tmp2 -> << -> 1 `i -> 1 `i `uc ]
+[e :U 2152 ]
+"155
+[; ;main.c: 155:     if (pwm_setting[10] > pwm_cnt) tmp2 |= (1<<2);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 10 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2153  ]
+[e =| _tmp2 -> << -> 1 `i -> 2 `i `uc ]
 [e :U 2153 ]
-"159
-[; ;main.c: 159:         pwm_cnt++;
-[e ++ F15915 -> -> 1 `i `uc ]
+"156
+[; ;main.c: 156:     if (pwm_setting[11] > pwm_cnt) tmp2 |= (1<<3);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 11 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2154  ]
+[e =| _tmp2 -> << -> 1 `i -> 3 `i `uc ]
 [e :U 2154 ]
-"161
-[; ;main.c: 161: }
-[e :UE 2136 ]
-}
+"157
+[; ;main.c: 157:     if (pwm_setting[12] > pwm_cnt) tmp2 |= (1<<4);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 12 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2155  ]
+[e =| _tmp2 -> << -> 1 `i -> 4 `i `uc ]
+[e :U 2155 ]
+"158
+[; ;main.c: 158:     if (pwm_setting[13] > pwm_cnt) tmp2 |= (1<<5);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 13 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2156  ]
+[e =| _tmp2 -> << -> 1 `i -> 5 `i `uc ]
+[e :U 2156 ]
+"159
+[; ;main.c: 159:     if (pwm_setting[14] > pwm_cnt) tmp2 |= (1<<6);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 14 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2157  ]
+[e =| _tmp2 -> << -> 1 `i -> 6 `i `uc ]
+[e :U 2157 ]
+"160
+[; ;main.c: 160:     if (pwm_setting[15] > pwm_cnt) tmp2 |= (1<<7);
+[e $ ! > -> *U + &U _pwm_setting * -> -> -> 15 `i `ui `ux -> -> # *U &U _pwm_setting `ui `ux `ui -> F15915 `ui 2158  ]
+[e =| _tmp2 -> << -> 1 `i -> 7 `i `uc ]
+[e :U 2158 ]
+"162
+[; ;main.c: 162:     LATA = tmp1;
+[e = _LATA _tmp1 ]
+"163
+[; ;main.c: 163:     LATC = tmp2;
+[e = _LATC _tmp2 ]
+"165
+[; ;main.c: 165:     if (pwm_cnt==254)
+[e $ ! == -> F15915 `i -> 254 `i 2159  ]
 "166
-[; ;main.c: 166: void my_delay( int val) {
+[; ;main.c: 166:         pwm_cnt=0;
+[e = F15915 -> -> 0 `i `uc ]
+[e $U 2160  ]
+"167
+[; ;main.c: 167:     else
+[e :U 2159 ]
+"168
+[; ;main.c: 168:         pwm_cnt++;
+[e ++ F15915 -> -> 1 `i `uc ]
+[e :U 2160 ]
+"170
+[; ;main.c: 170: }
+[e :UE 2142 ]
+}
+"175
+[; ;main.c: 175: void my_delay( int val) {
 [v _my_delay `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _my_delay ]
 [v _val `i ~T0 @X0 1 r1 ]
 [f ]
-"167
-[; ;main.c: 167:     int i;
+"176
+[; ;main.c: 176:     int i;
 [v _i `i ~T0 @X0 1 a ]
-"169
-[; ;main.c: 169:     for( i=0; i<=val; i++)
+"178
+[; ;main.c: 178:     for( i=0; i<=val; i++)
 {
 [e = _i -> 0 `i ]
-[e $U 2159  ]
-[e :U 2156 ]
-"170
-[; ;main.c: 170:     {
+[e $U 2165  ]
+[e :U 2162 ]
+"179
+[; ;main.c: 179:     {
 {
-"171
-[; ;main.c: 171:         _delay((unsigned long)((100)*(64000000/4000.0)));
+"180
+[; ;main.c: 180:         _delay((unsigned long)((100)*(64000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"172
-[; ;main.c: 172:     }
+"181
+[; ;main.c: 181:     }
 }
 [e ++ _i -> 1 `i ]
-[e :U 2159 ]
-[e $ <= _i _val 2156  ]
-[e :U 2157 ]
+[e :U 2165 ]
+[e $ <= _i _val 2162  ]
+[e :U 2163 ]
 }
-"174
-[; ;main.c: 174: }
-[e :UE 2155 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
 "183
-[; ;main.c: 183: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"184
-[; ;main.c: 184: {
-{
-[e :U _main ]
-[f ]
+[; ;main.c: 183: }
+[e :UE 2161 ]
+}
 "186
-[; ;main.c: 186:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
+[; ;main.c: 186: static void blinkFw(char* version)
+[v _blinkFw `(v ~T0 @X0 1 sf1`*uc ]
+"187
+[; ;main.c: 187: {
+{
+[e :U _blinkFw ]
+"186
+[; ;main.c: 186: static void blinkFw(char* version)
+[v _version `*uc ~T0 @X0 1 r1 ]
+"187
+[; ;main.c: 187: {
+[f ]
+"188
+[; ;main.c: 188: uint8_t pos, nval, blink, pause;
+[v _pos `uc ~T0 @X0 1 a ]
+[v _nval `uc ~T0 @X0 1 a ]
+[v _blink `uc ~T0 @X0 1 a ]
+[v _pause `uc ~T0 @X0 1 a ]
 "189
-[; ;main.c: 189:     (INTCON0bits.GIEH = 1);
-[e = . . _INTCON0bits 1 1 -> -> 1 `i `uc ]
+[; ;main.c: 189: my_delay(7);
+[e ( _my_delay (1 -> 7 `i ]
+"190
+[; ;main.c: 190: for (pos = 0; pos < 3; pos++) {
+{
+[e = _pos -> -> 0 `i `uc ]
+[e $ < -> _pos `i -> 3 `i 2167  ]
+[e $U 2168  ]
+[e :U 2167 ]
+{
+"191
+[; ;main.c: 191: nval = version[pos] - '0';
+[e = _nval -> - -> *U + _version * -> _pos `ux -> -> # *U _version `ui `ux `ui -> 48 `ui `uc ]
 "192
-[; ;main.c: 192:     (INTCON0bits.GIEL = 1);
-[e = . . _INTCON0bits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 192: if (nval) {
+[e $ ! != -> _nval `i -> 0 `i 2170  ]
+{
+"193
+[; ;main.c: 193: for (blink = 0; blink < nval; blink++)
+{
+[e = _blink -> -> 0 `i `uc ]
+[e $U 2174  ]
+[e :U 2171 ]
+"194
+[; ;main.c: 194: {
+{
 "195
-[; ;main.c: 195:     INT1_SetInterruptHandler(my_Int1_Isr);
-[e ( _INT1_SetInterruptHandler (1 &U _my_Int1_Isr ]
-"196
-[; ;main.c: 196:     TMR0_SetInterruptHandler(my_antiflicker_isr);
-[e ( _TMR0_SetInterruptHandler (1 &U _my_antiflicker_isr ]
-"197
-[; ;main.c: 197:     TMR2_SetInterruptHandler(my_pwm_isr);
-[e ( _TMR2_SetInterruptHandler (1 &U _my_pwm_isr ]
-"198
-[; ;main.c: 198:     TMR4_SetInterruptHandler(my_fading_isr);
-[e ( _TMR4_SetInterruptHandler (1 &U _my_fading_isr ]
-"201
-[; ;main.c: 201: uint8_t i,fading_level;
-[v _i `uc ~T0 @X0 1 a ]
-[v _fading_level `uc ~T0 @X0 1 a ]
-"202
-[; ;main.c: 202: uint8_t mode = 0;
-[v _mode `uc ~T0 @X0 1 a ]
-[e = _mode -> -> 0 `i `uc ]
-"205
-[; ;main.c: 205: for( i=0; i<=15; i++) pwm_setting[i] =0;
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ <= -> _i `i -> 15 `i 2161  ]
-[e $U 2162  ]
-[e :U 2161 ]
-[e = *U + &U _pwm_setting * -> _i `ux -> -> # *U &U _pwm_setting `ui `ux -> -> 0 `i `us ]
-[e ++ _i -> -> 1 `i `uc ]
-[e $ <= -> _i `i -> 15 `i 2161  ]
-[e :U 2162 ]
-}
-"206
-[; ;main.c: 206: lampdata = lampstatus = 0;
-[e = _lampdata = _lampstatus -> -> 0 `i `us ]
-"207
-[; ;main.c: 207: clocks_counter = old_clocks_counter = 0;
-[e = _clocks_counter = _old_clocks_counter -> 0 `i ]
-"210
-[; ;main.c: 210: for( i=0; i<5; i++) {
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 5 `i 2164  ]
-[e $U 2165  ]
-[e :U 2164 ]
-{
-"211
-[; ;main.c: 211:     do { LATBbits.LATB2 = 1; } while(0); do { LATBbits.LATB3 = 1; } while(0);
-[e :U 2169 ]
-{
-[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
-}
-[e :U 2168 ]
-[e :U 2172 ]
+[; ;main.c: 195: do { LATBbits.LATB3 = 1; } while(0);
+[e :U 2177 ]
 {
 [e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
 }
-[e :U 2171 ]
-"212
-[; ;main.c: 212:     my_delay(1);
+[e :U 2176 ]
+"196
+[; ;main.c: 196: my_delay(1);
 [e ( _my_delay (1 -> 1 `i ]
-"213
-[; ;main.c: 213:     do { LATBbits.LATB2 = 0; } while(0); do { LATBbits.LATB3 = 0; } while(0);
-[e :U 2175 ]
-{
-[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 2174 ]
-[e :U 2178 ]
+"197
+[; ;main.c: 197: do { LATBbits.LATB3 = 0; } while(0);
+[e :U 2180 ]
 {
 [e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
 }
-[e :U 2177 ]
-"214
-[; ;main.c: 214:     my_delay(1);
-[e ( _my_delay (1 -> 1 `i ]
-"215
-[; ;main.c: 215: }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 5 `i 2164  ]
-[e :U 2165 ]
-}
-"217
-[; ;main.c: 217: for( i=0; i<1; i++) {
-{
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 1 `i 2179  ]
-[e $U 2180  ]
 [e :U 2179 ]
+"198
+[; ;main.c: 198: my_delay(1);
+[e ( _my_delay (1 -> 1 `i ]
+"199
+[; ;main.c: 199: }
+}
+[e ++ _blink -> -> 1 `i `uc ]
+[e :U 2174 ]
+[e $ < -> _blink `i -> _nval `i 2171  ]
+[e :U 2172 ]
+}
+"200
+[; ;main.c: 200: pause = 10 - nval;
+[e = _pause -> - -> 10 `i -> _nval `i `uc ]
+"201
+[; ;main.c: 201: my_delay(pause);
+[e ( _my_delay (1 -> _pause `i ]
+"202
+[; ;main.c: 202: }
+}
+[e $U 2181  ]
+"203
+[; ;main.c: 203: else {
+[e :U 2170 ]
 {
-"218
-[; ;main.c: 218:     do { LATBbits.LATB2 = 1; } while(0);
+"204
+[; ;main.c: 204: do { LATBbits.LATB2 = 1; } while(0);
 [e :U 2184 ]
 {
 [e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
 }
 [e :U 2183 ]
-"219
-[; ;main.c: 219:     my_delay(3);
-[e ( _my_delay (1 -> 3 `i ]
-"220
-[; ;main.c: 220:     do { LATBbits.LATB2 = 0; } while(0);
+"205
+[; ;main.c: 205: my_delay(1);
+[e ( _my_delay (1 -> 1 `i ]
+"206
+[; ;main.c: 206: do { LATBbits.LATB2 = 0; } while(0);
 [e :U 2187 ]
 {
 [e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 2186 ]
-"221
-[; ;main.c: 221:     my_delay(3);
-[e ( _my_delay (1 -> 3 `i ]
+"207
+[; ;main.c: 207: my_delay(9);
+[e ( _my_delay (1 -> 9 `i ]
+"208
+[; ;main.c: 208: }
+}
+[e :U 2181 ]
+"209
+[; ;main.c: 209: }
+}
+[e ++ _pos -> -> 1 `i `uc ]
+[e $ < -> _pos `i -> 3 `i 2167  ]
+[e :U 2168 ]
+}
+"210
+[; ;main.c: 210: my_delay(9);
+[e ( _my_delay (1 -> 9 `i ]
+"211
+[; ;main.c: 211: }
+[e :UE 2166 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"216
+[; ;main.c: 216: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"217
+[; ;main.c: 217: {
+{
+[e :U _main ]
+[f ]
+"219
+[; ;main.c: 219:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
 "222
-[; ;main.c: 222: }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 1 `i 2179  ]
-[e :U 2180 ]
-}
+[; ;main.c: 222:     (INTCON0bits.GIEH = 1);
+[e = . . _INTCON0bits 1 1 -> -> 1 `i `uc ]
 "225
-[; ;main.c: 225: my_delay(5);
-[e ( _my_delay (1 -> 5 `i ]
-"226
-[; ;main.c: 226: do { LATBbits.LATB2 = 1; } while(0);
-[e :U 2190 ]
-{
-[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
-}
-[e :U 2189 ]
+[; ;main.c: 225:     (INTCON0bits.GIEL = 1);
+[e = . . _INTCON0bits 0 5 -> -> 1 `i `uc ]
+"228
+[; ;main.c: 228:     INT1_SetInterruptHandler(my_Int1_Isr);
+[e ( _INT1_SetInterruptHandler (1 &U _my_Int1_Isr ]
 "229
-[; ;main.c: 229: (INTCON0bits.GIE = 1);
-[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
+[; ;main.c: 229:     TMR0_SetInterruptHandler(my_antiflicker_isr);
+[e ( _TMR0_SetInterruptHandler (1 &U _my_antiflicker_isr ]
+"230
+[; ;main.c: 230:     TMR2_SetInterruptHandler(my_pwm_isr);
+[e ( _TMR2_SetInterruptHandler (1 &U _my_pwm_isr ]
 "231
-[; ;main.c: 231:  while(1) {
-[e :U 2192 ]
-{
+[; ;main.c: 231:     TMR4_SetInterruptHandler(my_fading_isr);
+[e ( _TMR4_SetInterruptHandler (1 &U _my_fading_isr ]
 "234
-[; ;main.c: 234:      fading_level = PORTBbits.RB5 + PORTBbits.RB4 + PORTBbits.RB4;
-[e = _fading_level -> + + -> . . _PORTBbits 0 5 `i -> . . _PORTBbits 0 4 `i -> . . _PORTBbits 0 4 `i `uc ]
+[; ;main.c: 234: uint8_t i,fading_level;
+[v _i `uc ~T0 @X0 1 a ]
+[v _fading_level `uc ~T0 @X0 1 a ]
 "235
-[; ;main.c: 235:      switch(fading_level) {
-[e $U 2195  ]
-{
-"236
-[; ;main.c: 236:          case 3: TMR4_Period8BitSet(60);
-[e :U 2196 ]
-[e ( _TMR4_Period8BitSet (1 -> -> 60 `i `uc ]
-"237
-[; ;main.c: 237:                  break;
-[e $U 2194  ]
+[; ;main.c: 235: uint8_t mode = 0;
+[v _mode `uc ~T0 @X0 1 a ]
+[e = _mode -> -> 0 `i `uc ]
 "238
-[; ;main.c: 238:          case 2: TMR4_Period8BitSet(80);
-[e :U 2197 ]
-[e ( _TMR4_Period8BitSet (1 -> -> 80 `i `uc ]
-"239
-[; ;main.c: 239:                  break;
-[e $U 2194  ]
-"240
-[; ;main.c: 240:          case 1: TMR4_Period8BitSet(40);
-[e :U 2198 ]
-[e ( _TMR4_Period8BitSet (1 -> -> 40 `i `uc ]
-"241
-[; ;main.c: 241:                  break;
-[e $U 2194  ]
-"242
-[; ;main.c: 242:          case 0: TMR4_Period8BitSet(3);
-[e :U 2199 ]
-[e ( _TMR4_Period8BitSet (1 -> -> 3 `i `uc ]
-"243
-[; ;main.c: 243:                  break;
-[e $U 2194  ]
-"244
-[; ;main.c: 244:      }
-}
-[e $U 2194  ]
-[e :U 2195 ]
-[e [\ _fading_level , $ -> 3 `i 2196
- , $ -> 2 `i 2197
- , $ -> 1 `i 2198
- , $ -> 0 `i 2199
- 2194 ]
-[e :U 2194 ]
-"246
-[; ;main.c: 246:      if ( PORTBbits.RB7 == 0) { mode = 1; }
-[e $ ! == -> . . _PORTBbits 0 7 `i -> 0 `i 2200  ]
-{
-[e = _mode -> -> 1 `i `uc ]
-}
-[e :U 2200 ]
-"248
-[; ;main.c: 248:      if ( mode == 0 ) {
-[e $ ! == -> _mode `i -> 0 `i 2201  ]
-{
-"250
-[; ;main.c: 250:      }
-}
-[e $U 2202  ]
-"251
-[; ;main.c: 251:      else {
-[e :U 2201 ]
-{
-"253
-[; ;main.c: 253:          (PIE5bits.INT1IE = 0);
-[e = . . _PIE5bits 0 0 -> -> 0 `i `uc ]
-"254
-[; ;main.c: 254:          TMR0_StopTimer();
-[e ( _TMR0_StopTimer ..  ]
-"256
-[; ;main.c: 256:          lampstatus = 0;
-[e = _lampstatus -> -> 0 `i `us ]
-"257
-[; ;main.c: 257:          for ( i=0; i<=15; i++) {
+[; ;main.c: 238: for( i=0; i<=15; i++) pwm_setting[i] =0;
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ <= -> _i `i -> 15 `i 2203  ]
-[e $U 2204  ]
-[e :U 2203 ]
-{
-"258
-[; ;main.c: 258:              lampstatus |= (1u << i);
-[e =| _lampstatus -> << -> 1 `ui -> _i `i `Vus ]
-"259
-[; ;main.c: 259:              my_delay(2);
-[e ( _my_delay (1 -> 2 `i ]
-"261
-[; ;main.c: 261:              if ( PORTBbits.RB6 == 0) {
-[e $ ! == -> . . _PORTBbits 0 6 `i -> 0 `i 2206  ]
-{
-"262
-[; ;main.c: 262:                  mode = 0;
-[e = _mode -> -> 0 `i `uc ]
-"263
-[; ;main.c: 263:                  break;
-[e $U 2204  ]
-"264
-[; ;main.c: 264:                 }
+[e $ <= -> _i `i -> 15 `i 2189  ]
+[e $U 2190  ]
+[e :U 2189 ]
+[e = *U + &U _pwm_setting * -> _i `ux -> -> # *U &U _pwm_setting `ui `ux -> -> 0 `i `us ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ <= -> _i `i -> 15 `i 2189  ]
+[e :U 2190 ]
 }
-[e :U 2206 ]
-"265
-[; ;main.c: 265:              lampstatus = 0;
-[e = _lampstatus -> -> 0 `i `us ]
-"266
-[; ;main.c: 266:              if ( PORTBbits.RB3 == 0) do { LATBbits.LATB3 = 1; } while(0); else do { LATBbits.LATB3 = 0; } while(0);
-[e $ ! == -> . . _PORTBbits 0 3 `i -> 0 `i 2207  ]
-[e :U 2210 ]
+"239
+[; ;main.c: 239: lampdata = lampstatus = 0;
+[e = _lampdata = _lampstatus -> -> 0 `i `us ]
+"240
+[; ;main.c: 240: clocks_counter = old_clocks_counter = 0;
+[e = _clocks_counter = _old_clocks_counter -> 0 `i ]
+"243
+[; ;main.c: 243: for( i=0; i<5; i++) {
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 2192  ]
+[e $U 2193  ]
+[e :U 2192 ]
+{
+"244
+[; ;main.c: 244:     do { LATBbits.LATB3 = 1; } while(0); do { LATBbits.LATB2 = 1; } while(0);
+[e :U 2197 ]
 {
 [e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
 }
-[e :U 2209 ]
-[e $U 2211  ]
-[e :U 2207 ]
-[e :U 2214 ]
+[e :U 2196 ]
+[e :U 2200 ]
+{
+[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 2199 ]
+"245
+[; ;main.c: 245:     my_delay(1);
+[e ( _my_delay (1 -> 1 `i ]
+"246
+[; ;main.c: 246:     do { LATBbits.LATB3 = 0; } while(0); do { LATBbits.LATB2 = 0; } while(0);
+[e :U 2203 ]
 {
 [e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-}
-[e :U 2213 ]
-[e :U 2211 ]
-"267
-[; ;main.c: 267:             }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ <= -> _i `i -> 15 `i 2203  ]
-[e :U 2204 ]
-}
-"268
-[; ;main.c: 268:          if ( mode == 0 ) {
-[e $ ! == -> _mode `i -> 0 `i 2215  ]
-{
-"269
-[; ;main.c: 269:             (PIE5bits.INT1IE = 1);
-[e = . . _PIE5bits 0 0 -> -> 1 `i `uc ]
-"270
-[; ;main.c: 270:             TMR0_StartTimer();
-[e ( _TMR0_StartTimer ..  ]
-"271
-[; ;main.c: 271:             do { LATBbits.LATB3 = 0; } while(0);
-[e :U 2218 ]
-{
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-}
-[e :U 2217 ]
-"272
-[; ;main.c: 272:              }
-}
-[e :U 2215 ]
-"273
-[; ;main.c: 273:          }
 }
 [e :U 2202 ]
-"274
-[; ;main.c: 274:  }
+[e :U 2206 ]
+{
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 2191 ]
-[e $U 2192  ]
+[e :U 2205 ]
+"247
+[; ;main.c: 247:     my_delay(1);
+[e ( _my_delay (1 -> 1 `i ]
+"248
+[; ;main.c: 248: }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 2192  ]
 [e :U 2193 ]
-"275
-[; ;main.c: 275: }
-[e :UE 2160 ]
 }
+"251
+[; ;main.c: 251: blinkFw("103");
+[e ( _blinkFw (1 :s 1C ]
+"254
+[; ;main.c: 254: do { LATBbits.LATB3 = 1; } while(0);
+[e :U 2209 ]
+{
+[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
+}
+[e :U 2208 ]
+"257
+[; ;main.c: 257: (INTCON0bits.GIE = 1);
+[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
+"259
+[; ;main.c: 259:  while(1) {
+[e :U 2211 ]
+{
+"262
+[; ;main.c: 262:      fading_level = PORTBbits.RB5 + PORTBbits.RB4 + PORTBbits.RB4;
+[e = _fading_level -> + + -> . . _PORTBbits 0 5 `i -> . . _PORTBbits 0 4 `i -> . . _PORTBbits 0 4 `i `uc ]
+"263
+[; ;main.c: 263:      switch(fading_level) {
+[e $U 2214  ]
+{
+"264
+[; ;main.c: 264:          case 3: TMR4_Period8BitSet(60);
+[e :U 2215 ]
+[e ( _TMR4_Period8BitSet (1 -> -> 60 `i `uc ]
+"265
+[; ;main.c: 265:                  break;
+[e $U 2213  ]
+"266
+[; ;main.c: 266:          case 2: TMR4_Period8BitSet(80);
+[e :U 2216 ]
+[e ( _TMR4_Period8BitSet (1 -> -> 80 `i `uc ]
+"267
+[; ;main.c: 267:                  break;
+[e $U 2213  ]
+"268
+[; ;main.c: 268:          case 1: TMR4_Period8BitSet(40);
+[e :U 2217 ]
+[e ( _TMR4_Period8BitSet (1 -> -> 40 `i `uc ]
+"269
+[; ;main.c: 269:                  break;
+[e $U 2213  ]
+"270
+[; ;main.c: 270:          case 0: TMR4_Period8BitSet(3);
+[e :U 2218 ]
+[e ( _TMR4_Period8BitSet (1 -> -> 3 `i `uc ]
+"271
+[; ;main.c: 271:                  break;
+[e $U 2213  ]
+"272
+[; ;main.c: 272:      }
+}
+[e $U 2213  ]
+[e :U 2214 ]
+[e [\ _fading_level , $ -> 3 `i 2215
+ , $ -> 2 `i 2216
+ , $ -> 1 `i 2217
+ , $ -> 0 `i 2218
+ 2213 ]
+[e :U 2213 ]
+"274
+[; ;main.c: 274:      if ( PORTBbits.RB7 == 0) { mode = 1; }
+[e $ ! == -> . . _PORTBbits 0 7 `i -> 0 `i 2219  ]
+{
+[e = _mode -> -> 1 `i `uc ]
+}
+[e :U 2219 ]
+"276
+[; ;main.c: 276:      if ( mode == 0 ) {
+[e $ ! == -> _mode `i -> 0 `i 2220  ]
+{
+"278
+[; ;main.c: 278:      }
+}
+[e $U 2221  ]
+"279
+[; ;main.c: 279:      else {
+[e :U 2220 ]
+{
+"281
+[; ;main.c: 281:          (PIE5bits.INT1IE = 0);
+[e = . . _PIE5bits 0 0 -> -> 0 `i `uc ]
+"282
+[; ;main.c: 282:          TMR0_StopTimer();
+[e ( _TMR0_StopTimer ..  ]
+"284
+[; ;main.c: 284:          lampstatus = 0;
+[e = _lampstatus -> -> 0 `i `us ]
+"285
+[; ;main.c: 285:          for ( i=0; i<=15; i++) {
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ <= -> _i `i -> 15 `i 2222  ]
+[e $U 2223  ]
+[e :U 2222 ]
+{
+"286
+[; ;main.c: 286:              lampstatus |= (1u << i);
+[e =| _lampstatus -> << -> 1 `ui -> _i `i `Vus ]
+"287
+[; ;main.c: 287:              my_delay(2);
+[e ( _my_delay (1 -> 2 `i ]
+"289
+[; ;main.c: 289:              if ( PORTBbits.RB6 == 0) {
+[e $ ! == -> . . _PORTBbits 0 6 `i -> 0 `i 2225  ]
+{
+"290
+[; ;main.c: 290:                  mode = 0;
+[e = _mode -> -> 0 `i `uc ]
+"291
+[; ;main.c: 291:                  break;
+[e $U 2223  ]
+"292
+[; ;main.c: 292:                 }
+}
+[e :U 2225 ]
+"293
+[; ;main.c: 293:              lampstatus = 0;
+[e = _lampstatus -> -> 0 `i `us ]
+"294
+[; ;main.c: 294:              if ( PORTBbits.RB2 == 0) do { LATBbits.LATB2 = 1; } while(0); else do { LATBbits.LATB2 = 0; } while(0);
+[e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 2226  ]
+[e :U 2229 ]
+{
+[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 2228 ]
+[e $U 2230  ]
+[e :U 2226 ]
+[e :U 2233 ]
+{
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 2232 ]
+[e :U 2230 ]
+"295
+[; ;main.c: 295:             }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ <= -> _i `i -> 15 `i 2222  ]
+[e :U 2223 ]
+}
+"296
+[; ;main.c: 296:          if ( mode == 0 ) {
+[e $ ! == -> _mode `i -> 0 `i 2234  ]
+{
+"297
+[; ;main.c: 297:             (PIE5bits.INT1IE = 1);
+[e = . . _PIE5bits 0 0 -> -> 1 `i `uc ]
+"298
+[; ;main.c: 298:             TMR0_StartTimer();
+[e ( _TMR0_StartTimer ..  ]
+"299
+[; ;main.c: 299:             do { LATBbits.LATB2 = 0; } while(0);
+[e :U 2237 ]
+{
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 2236 ]
+"300
+[; ;main.c: 300:              }
+}
+[e :U 2234 ]
+"301
+[; ;main.c: 301:          }
+}
+[e :U 2221 ]
+"302
+[; ;main.c: 302:  }
+}
+[e :U 2210 ]
+[e $U 2211  ]
+[e :U 2212 ]
+"303
+[; ;main.c: 303: }
+[e :UE 2188 ]
+}
+[a 1C 49 48 51 0 ]
