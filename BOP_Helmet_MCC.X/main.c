@@ -11,6 +11,8 @@
  * TMR4 is now low INT
  * added casting for bit macros
  * added Blinkcode to show Versiom at start
+ * v102
+ * corrected Data signaling
  * 
  *  */
 
@@ -22,7 +24,7 @@
 #pragma warning disable 520
 
 //Version for Blink Code
-#define VERSION 1
+#define VERSION 2
 
 //Fading
 #define FAD_T_O 3  //ON ON no fading
@@ -69,7 +71,7 @@ void my_Int1_Isr(void)    {
   // increment clocks counter
   clocks_counter++;
   //signaling
-  LED1_LAT = CLOCK_PORT;         
+  LED1_SetHigh();
 
    
 }
@@ -85,7 +87,9 @@ void my_antiflicker_isr(void)    {
         //assign new values
         lampstatus = lampdata;        
         //reset counters
-        clocks_counter = old_clocks_counter = 0;                
+        clocks_counter = old_clocks_counter = 0;  
+        //end signaling
+        LED1_SetLow();
     }
     else
     {
