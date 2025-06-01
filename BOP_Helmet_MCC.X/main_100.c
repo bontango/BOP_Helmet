@@ -6,12 +6,6 @@
  * READ Port / Write LAT
  * MCC Version
  * v100 initial version for Hardware 2.x
- * v101
- * corrected LED order
- * TMR4 is now low INT
- * added casting for bit macros
- * added Blinkcode to show Versiom at start
- * 
  *  */
 
 #include "mcc_generated_files/mcc.h"
@@ -21,10 +15,6 @@
 //supress 'never called' warnings
 #pragma warning disable 520
 
-//Version for Blink Code
-#define VERSION 1
-
-//Fading
 #define FAD_T_O 3  //ON ON no fading
 #define FAD_T_1 40 //ON OFF less fading
 #define FAD_T_2 80 //OFF ON more fading
@@ -32,10 +22,10 @@
 
 //some bit settings routines
 //postion(pos) goes from 0
-#define CHECK_BIT(var, pos)   ((var) & (1u << (pos)))
-#define SET_BIT(var, pos)     var |= (1u << pos)
-#define CLEAR_BIT(var, pos)   var &= (~(1u << pos))
-#define TOGGLE_BIT(var, pos)  var ^= (1u << pos)
+#define CHECK_BIT(var, pos)   ((var) & (1 << (pos)))
+#define SET_BIT(var, pos)     var |= (1 << pos)
+#define CLEAR_BIT(var, pos)   var &= (~(1 << pos))
+#define TOGGLE_BIT(var, pos)  var ^= (1 << pos)
     
     
 //global vars, used in most routines
@@ -68,9 +58,6 @@ void my_Int1_Isr(void)    {
     
   // increment clocks counter
   clocks_counter++;
-  //signaling
-  LED1_LAT = CLOCK_PORT;         
-
    
 }
 
@@ -206,24 +193,16 @@ for( i=0; i<=15; i++) pwm_setting[i] =0;
 lampdata = lampstatus = 0;
 clocks_counter = old_clocks_counter = 0;
 
-//wait a bit before running
+//wait a second before running
 for( i=0; i<5; i++) {
-    LED2_SetHigh(); LED1_SetHigh();
-    my_delay(1);
-    LED2_SetLow(); LED1_SetLow();
-    my_delay(1);    
-}
-//LED2 Blinkcode to show Versio at start
-for( i=0; i<VERSION; i++) {
-    LED2_SetHigh();
-    my_delay(3);
-    LED2_SetLow();
-    my_delay(3);    
+    LED1_SetHigh(); LED2_SetHigh();
+    my_delay(2);
+    LED1_SetLow(); LED2_SetLow();
+    my_delay(2);    
 }
 
-//ON indicator
-my_delay(5);
-LED2_SetHigh();
+LED1_SetHigh();
+LED2_SetLow();
 
 //enable interrupts
 ei();
@@ -246,7 +225,10 @@ ei();
      if ( SW1_GetValue() == 0) { mode = MODE_TEST; }
      
      if ( mode == MODE_RUN ) {
-              
+         
+     //signaling
+     LED2_LAT = CLOCK_PORT;         
+     
      }
      else { //MODE Test
          //disable some interrupts
@@ -263,12 +245,12 @@ ei();
                  break;
                 }
              lampstatus = 0;                                  
-             if ( LED1_GetValue() == 0) LED1_SetHigh(); else LED1_SetLow();
+             if ( LED2_GetValue() == 0) LED2_SetHigh(); else LED2_SetLow();
             }
          if ( mode == MODE_RUN ) {
             EXT_INT1_InterruptEnable();
             TMR0_StartTimer();
-            LED1_SetLow();
+            LED2_SetLow();
              }
          }     
  }//endless loop

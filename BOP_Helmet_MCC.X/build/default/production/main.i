@@ -7,7 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 11 "main.c"
+# 17 "main.c"
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-K_DFP/1.5.114/xc8\\pic\\include\\xc.h" 1 3
@@ -26384,7 +26384,7 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 100 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
-# 11 "main.c" 2
+# 17 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 3
@@ -26443,13 +26443,13 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 12 "main.c" 2
+# 18 "main.c" 2
 
 
 
 
 #pragma warning disable 520
-# 33 "main.c"
+# 43 "main.c"
 volatile uint16_t lampdata;
 volatile uint16_t lampstatus;
 volatile uint16_t pwm_setting[16];
@@ -26472,12 +26472,15 @@ void my_Int1_Isr(void) {
 
 
   if (PORTBbits.RB0 == 0)
-      lampdata &= (~(1 << 0));
+      lampdata &= (~(1u << 0));
   else
-      lampdata |= (1 << 0);
+      lampdata |= (1u << 0);
 
 
   clocks_counter++;
+
+  LATBbits.LATB3 = PORTBbits.RB1;
+
 
 }
 
@@ -26514,7 +26517,7 @@ void my_fading_isr(void) {
 
     for (io=0; io<=15; io++) {
 
-        if ( ((lampstatus) & (1 << (io))) == 0) {
+        if ( ((lampstatus) & (1u << (io))) == 0) {
             if (pwm_phase[io] != 0) {
             --pwm_phase[io];
             pwm_setting[io] = pwm_table[pwm_phase[io]];
@@ -26579,7 +26582,7 @@ void my_delay( int val) {
     }
 
 }
-# 170 "main.c"
+# 183 "main.c"
 void main(void)
 {
 
@@ -26608,14 +26611,22 @@ clocks_counter = old_clocks_counter = 0;
 
 
 for( i=0; i<5; i++) {
-    do { LATBbits.LATB3 = 1; } while(0); do { LATBbits.LATB2 = 1; } while(0);
-    my_delay(2);
-    do { LATBbits.LATB3 = 0; } while(0); do { LATBbits.LATB2 = 0; } while(0);
-    my_delay(2);
+    do { LATBbits.LATB2 = 1; } while(0); do { LATBbits.LATB3 = 1; } while(0);
+    my_delay(1);
+    do { LATBbits.LATB2 = 0; } while(0); do { LATBbits.LATB3 = 0; } while(0);
+    my_delay(1);
 }
 
-do { LATBbits.LATB3 = 1; } while(0);
-do { LATBbits.LATB2 = 0; } while(0);
+for( i=0; i<1; i++) {
+    do { LATBbits.LATB2 = 1; } while(0);
+    my_delay(3);
+    do { LATBbits.LATB2 = 0; } while(0);
+    my_delay(3);
+}
+
+
+my_delay(5);
+do { LATBbits.LATB2 = 1; } while(0);
 
 
 (INTCON0bits.GIE = 1);
@@ -26639,9 +26650,6 @@ do { LATBbits.LATB2 = 0; } while(0);
 
      if ( mode == 0 ) {
 
-
-     LATBbits.LATB2 = PORTBbits.RB1;
-
      }
      else {
 
@@ -26650,7 +26658,7 @@ do { LATBbits.LATB2 = 0; } while(0);
 
          lampstatus = 0;
          for ( i=0; i<=15; i++) {
-             lampstatus |= (1 << i);
+             lampstatus |= (1u << i);
              my_delay(2);
 
              if ( PORTBbits.RB6 == 0) {
@@ -26658,12 +26666,12 @@ do { LATBbits.LATB2 = 0; } while(0);
                  break;
                 }
              lampstatus = 0;
-             if ( PORTBbits.RB2 == 0) do { LATBbits.LATB2 = 1; } while(0); else do { LATBbits.LATB2 = 0; } while(0);
+             if ( PORTBbits.RB3 == 0) do { LATBbits.LATB3 = 1; } while(0); else do { LATBbits.LATB3 = 0; } while(0);
             }
          if ( mode == 0 ) {
             (PIE5bits.INT1IE = 1);
             TMR0_StartTimer();
-            do { LATBbits.LATB2 = 0; } while(0);
+            do { LATBbits.LATB3 = 0; } while(0);
              }
          }
  }
